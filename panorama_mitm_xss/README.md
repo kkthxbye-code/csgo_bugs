@@ -1,3 +1,7 @@
+## MITM and XSS exploit in Counter-Strike: Global Offensive
+CS:GO uses the source 2 component Panorama for its UI. It's very much like Electron, in that it is a HTML renderer with a JS API. 
+Valve made some mistakes while implementing this, allowing MITM that leads to XSS. This allows you to run JS code in the game, without hooking the process.
+
 ### MITM
 Panorama loads http://blog.counter-strike.net/index.php/feed/ for the news on the front page of the CSGO UI. Notice the lack of https. Add ```127.0.0.1 blog.counter-strike.net``` to your hosts file and run a local webserver (check out main.py).
 
