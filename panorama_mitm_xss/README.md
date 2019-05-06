@@ -37,3 +37,5 @@ The following payload will wait 45 seconds and then activate r_drawothermodels 2
 
 ### Example webserver
 Just run the main.py (depends on flask). Can be made in anything, just remember the content-type header.
+
+![](a.gif)
