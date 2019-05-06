@@ -1,6 +1,9 @@
 ## MITM and XSS exploit in Counter-Strike: Global Offensive
 CS:GO uses the source 2 component Panorama for its UI. It's very much like Electron, in that it is a HTML renderer with a JS API. 
-Valve made some mistakes while implementing this, allowing MITM that leads to XSS. This allows you to run JS code in the game, without hooking the process.
+
+Valve made some mistakes while implementing this, allowing MITM that leads to XSS. This allows you to run JS code in the game, without hooking the process. This can be used to make custom UI's, set cheat protected CVARS or just play with the internal API.
+
+The UI source code for CS:GO can be found in ```/steamapps/common/Counter-Strike Global Offensive/csgo/panorama```.
 
 ### MITM
 Panorama loads http://blog.counter-strike.net/index.php/feed/ for the news on the front page of the CSGO UI. Notice the lack of https. Add ```127.0.0.1 blog.counter-strike.net``` to your hosts file and run a local webserver (check out main.py).
@@ -34,6 +37,7 @@ The following payload will wait 45 seconds and then activate r_drawothermodels 2
 ```		
 <link>https://blah.io/test"); $.Schedule( 45.0, _ => {GameInterfaceAPI.SetSettingString("r_drawothermodels", "2");} );//</link>
 ```
+As was found by some other people, GameInterfaceAPI.SetSettingString does not respect cheat flagged cvars.
 
 ### Example webserver
 Just run the main.py (depends on flask). Can be made in anything, just remember the content-type header.
