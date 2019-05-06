@@ -1,5 +1,6 @@
 Original Issue: https://github.com/ValveSoftware/csgo-osx-linux/issues/1888
-First reported in october 2018, reported multiple times since.
+
+First reported in october 2018, reported multiple times since. Never received any response.
 
 ## Original issue text below
 The engine seems to cache loaded props (between map change) for maps with packed textures, which allows you to bug the loading of models and allow the player to see through props on the map, granting an undetectable wallhack.
