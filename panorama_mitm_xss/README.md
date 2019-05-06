@@ -1,7 +1,7 @@
 ## MITM and XSS exploit in Counter-Strike: Global Offensive
 CS:GO uses the source 2 component Panorama for its UI. It's very much like Electron, in that it is a HTML renderer with a JS API. 
 
-Valve made some mistakes while implementing this, allowing MITM that leads to XSS. This allows you to run JS code in the game, without hooking the process, as the integrity of the code for the panorama UI is verified by the game. This can be used to make custom UI's, set cheat protected CVARS or just play with the internal API.
+Valve made some mistakes while implementing this, allowing MITM that leads to XSS. This allows you to run JS code in the game, without hooking the process (the code.pbin file is verified, so modification is not possible). This can be used to make custom UI's, set cheat protected CVARS or just play with the internal API.
 
 The UI source code for CS:GO can be found in ```/steamapps/common/Counter-Strike Global Offensive/csgo/panorama/code.pbin```. Can be unzipped with 7zip.
 
