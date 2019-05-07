@@ -1,4 +1,12 @@
 ## MITM and XSS exploit in Counter-Strike: Global Offensive
+
+### Fixed on 07-05-2019
+*https://github.com/SteamDatabase/GameTracking-CSGO/commit/2174089a01d9289fa62e098d142ac77f49667408*
+
+*They fixed it by changing the URL to https and not eval'ing unsafe input. Still plenty of entrypoints.*
+
+---
+
 CS:GO uses the source 2 component Panorama for its UI. It's very much like Electron, in that it is a HTML renderer with a JS API. 
 
 Valve made some mistakes while implementing this, allowing MITM that leads to XSS. This allows you to run JS code in the game, without hooking the process (the code.pbin file is verified, so modification is not possible). This can be used to make custom UI's, set cheat protected CVARS or just play with the internal API.
