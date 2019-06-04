@@ -6,7 +6,7 @@ with open("soundmixers.txt", "rb") as f:
 
 soundmixer_path = r"D:\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\scripts\soundmixers.txt"
 
-start_delay = 15 #csgo startup time in seconds
+start_delay = 20 #csgo startup time in seconds
 
 def get_csgo_runtime():
 	for process in psutil.process_iter():

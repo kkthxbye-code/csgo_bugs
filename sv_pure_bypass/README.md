@@ -28,6 +28,6 @@ In the soundmixer.txt file you can adjust the different mixer groups. This allow
 
 This is pretty useful as the sound mixing is terrible in this game.
 
-If you want to use the script, install python 3, run pip install -r requirements.txt and then just run the script. You need to change the path to the soundmixers.txt file. Your custom sound config can be added to soundmixers_custom.txt.
+If you want to use the script, install python 3, run pip install -r requirements.txt and then just run the script. You need to change the path to the soundmixers.txt file. Your custom sound config can be added to soundmixers_custom.txt. You might need to adjust the start_delay variable to match how long it takes for you to launch CS:GO.
 
 The script just waits for csgo.exe to have been running for 15 seconds, and then it replaces the file. When CS:GO closes, it restores the original.
