@@ -1,4 +1,9 @@
+#### Sparkles video note:
+
+Seems like spakles made yet another video. Contrary to what he said in the video, this has been in the game probably since launch. I found it about six months ago. The other sv_pure bypass also still works.
+
 ## sv\_pure bypass \#2
+
 Official valve servers, and most community servers, run with `sv_pure 1`. This causes the client to send crc hashes of the files defined in `pure_server_whitelist.txt` to the server. The server then matches the hashes and kicks the player if there is a mismatch.
 
 When loading some game files, the engine tries to load from the platform folder, before trying to load from the csgo folder. The platform folder is however not checked by sv_pure at all, thus giving us yet another sv_pure bypass.
