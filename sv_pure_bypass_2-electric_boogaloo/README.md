@@ -18,10 +18,10 @@ To utilize this feature, download the soundmixers.txt file and put it in: [STEAM
 
 Other stuff you can change:
 
-* Distant gunfire (enemy/ally)
-* First person gunfire
+* Distant gunfire (both enemies and allies)
+* First person gunfire (affects all players, including yourself)
 * Own footsteps
-* Distant footsteps (enemy/ally)
+* Distant footsteps (both enemies and allies)
 * Explosions
 * Decoy (you can completely mute decoy grenades)
 * Ambient (Overpass is completely silent with this muted, but it might not mute all ambient on all maps)
