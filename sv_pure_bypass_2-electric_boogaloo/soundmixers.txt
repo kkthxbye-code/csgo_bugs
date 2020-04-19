@@ -108,23 +108,23 @@
 		"gamestartup" 		"0.25" "1.0" "1.0"   
 
 		"Explosions"            	"1.0" "1.0" "1.0"    
-		"ExplosionsDistant"    "1.6" "1.0" "1.0"
-		"ExplosionsDecoy"    	"1.6" "1.0" "1.0"  	
+		"ExplosionsDistant"    "2.0" "1.0" "1.0"
+		"ExplosionsDecoy"    	"0.0" "1.0" "1.0"  	
 		"BulletImpacts"          "0.2" "1.0" "1.0"
 		"BulletRicochets"       	"0.4" "1.0" "1.0"
 		"Physics"       		"0.8" "1.0" "1.0"
 
-		"DistWeapons"            "1.5" "1.0" "0.3"
-		"Weapons1"           	"0.2" "1.0" "1.0"
-		"FoleyWeapons"         "0.7" "1.0" "1.0"
-		"C4Foley"           	"1.0" "1.0" "1.0"
+		"DistWeapons"            "1.7" "1.0" "0.3"
+		"Weapons1"           	"0.7" "1.0" "1.0"
+		"FoleyWeapons"         "1.4" "1.0" "1.0"
+		"C4Foley"           	"3.5" "1.0" "1.0"
 		"AllWeapons"             "1.0" "1.0" "1.0"
 	    
-		"Ambient"                	"0.25" "1.0" "1.0"
+		"Ambient"                	"0.0" "1.0" "1.0"
 		"Survival"			"1.0" "1.0" "0.3"
 
-		"PlayerFootsteps"        "0" "1.0" "1.0"
-		"GlobalFootsteps"        "2.0" "0.9" "0.9"
+		"PlayerFootsteps"        "0.13" "1.0" "1.0"
+		"GlobalFootsteps"        "1.5" "0.9" "0.9"
 
 		"SelectedMusic"         "0.6" "1.0" "1.0"
 		"BuyMusic"                "0.8" "1.0" "0.0"
@@ -138,7 +138,7 @@
 
 		"Replay"			"1.0" "1.0" "1.0"
 
-		"UI"                    	"1.0" "1.0" "0.2"
+		"UI"                    	"0.2" "1.0" "0.2"
 		
 		"All"                    	"1.0" "1.0" "1.0"
 	}
