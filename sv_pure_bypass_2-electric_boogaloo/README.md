@@ -1,6 +1,6 @@
 #### Sparkles video note:
 
-Seems like spakles made yet another video. Contrary to what he said in the video, this has been in the game probably since launch. I found it about six months ago. The other sv_pure bypass also still works.
+Seems like spakles made yet another video. Contrary to what he said in the video, this has been in the game probably since launch. I found it about six months ago. The other sv_pure bypass also still works. Also shoutout to /r/ninjaflank for being an idiot.
 
 ## sv\_pure bypass \#2
 
