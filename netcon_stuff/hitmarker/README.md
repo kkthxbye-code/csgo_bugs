@@ -1,5 +1,7 @@
 ## Hitmarker
 
+![](example.gif)
+
 Proof of Concept made by [@szmarczak](https://github.com/szmarczak).
 
 Changes the crosshaircolor when you hit an enemy, even through walls. It works by using `net_dumpeventstats` as explained in [con_logfile_tricks](../../con_logfile_tricks), just made way easier by being able to use netcon.
