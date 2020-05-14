@@ -1,8 +1,6 @@
-#### Sparkles video note:
-
-Seems like spakles made yet another video. Contrary to what he said in the video, this has been in the game probably since launch. I found it about six months ago. The other sv_pure bypass also still works. Also shoutout to /r/ninjaflank for being an idiot.
-
 ## sv\_pure bypass \#2
+
+*Fixed 5/4/2020*
 
 Official valve servers, and most community servers, run with `sv_pure 1`. This causes the client to send crc hashes of the files defined in `pure_server_whitelist.txt` to the server. The server then matches the hashes and kicks the player if there is a mismatch.
 
