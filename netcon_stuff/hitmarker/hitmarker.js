@@ -1,7 +1,18 @@
 'use strict';
 const net = require('net');
 const readline = require('readline');
+const path = require('path');
 
+/*
+alias +hitmarker_attack "net_dumpeventstats; +attack; echo hitmarker_on";
+alias -hitmarker_attack "-attack; echo hitmarker_off";
+bind mouse1 +hitmarker_attack;
+*/
+
+// If your FPS drops, change this to 10.
+const TICK_RATE = 64;
+
+let ticksLeft = 0;
 let previous = {};
 let timeout;
 
@@ -10,20 +21,22 @@ const onChange = data => {
 		return;
 	}
 
-	if (!(data.Name in previous) || previous[data.Name].Out !== data.Out) {
+	if (!(data.Name in previous) || previous[data.Name].In !== data.In) {
 		previous[data.Name] = data;
 
-		clearTimeout(timeout);
-		socket.write(`cl_crosshaircolor_r 255; cl_crosshaircolor_g 0; cl_crosshaircolor_b 0\n`);
-		
-		setTimeout(() => {
-			socket.write(`cl_crosshaircolor_r 0; cl_crosshaircolor_g 255; cl_crosshaircolor_b 0\n`);
-		}, 400);
+		if (ticksLeft > 0) {
+			clearTimeout(timeout);
+
+			socket.write(`cl_crosshaircolor 5; cl_crosshaircolor_r 255; cl_crosshaircolor_g 0; cl_crosshaircolor_b 0\n`);
+			
+			timeout = setTimeout(() => {
+				socket.write(`cl_crosshaircolor 5; cl_crosshaircolor_r 0; cl_crosshaircolor_g 255; cl_crosshaircolor_b 0\n`);
+			}, 400);
+		}
 	}
 };
 
 const COMMAND = 'net_dumpeventstats';
-const TICK_RATE = 64 / 12; // FPS drops very much when it's divided by 8 or less... But feel free to try it.
 const WANTED = {
 	Name: 'string',
 	Out: 'number',
@@ -42,7 +55,7 @@ const whitespaceRegExp = /\s{2,}/g;
 
 const port = Number(process.argv[2] || 0);
 if (process.argv.length !== 3 || !port) {
-	console.error('Usage: node index.js [port]');
+	console.error(`Usage: node ${path.basename(process.argv[1])} [port]`);
 	return;
 }
 
@@ -55,52 +68,70 @@ const socket = net.connect(port, '127.0.0.1', async () => {
 	});
 
 	let reading = false;
-	let data = {};
+	let interval;
 
 	for await (const line of reader) {
 		const processedLine = line.replace(whitespaceRegExp, ' ').trim();
 
-		if (reading) {
-			const parsedLine = processedLine.split(' ');
+		if (processedLine === 'hitmarker_on') {
+			clearTimeout(timeout);
+			ticksLeft = Infinity;
 
-			if (parsedLine.length !== WANTED_LENGTH) {
-				reading = false;
-				continue;
-			}
+			socket.write(`cl_crosshaircolor 5; cl_crosshaircolor_r 0; cl_crosshaircolor_g 255; cl_crosshaircolor_b 0\n${COMMAND}\n`);
+		} else if (processedLine === 'hitmarker_off') {
+			ticksLeft = 1;
+		} else {
+			if (reading) {
+				const parsedLine = processedLine.split(' ');
 
-			const object = {};
+				if (parsedLine.length !== WANTED_LENGTH) {
+					reading = false;
+					continue;
+				}
 
-			for (let index = 0; index < WANTED_KEYS.length; index++) {
-				const key = WANTED_KEYS[index];
-				const type = WANTED[key];
+				const object = {};
 
-				if (type === 'string') {
-					object[key] = parsedLine[index];
-				} else if (type === 'number') {
-					object[key] = Number(parsedLine[index]);
+				for (let index = 0; index < WANTED_KEYS.length; index++) {
+					const key = WANTED_KEYS[index];
+					const type = WANTED[key];
 
-					if (Number.isNaN(object[key])) {
-						reading = false;
+					if (type === 'string') {
+						object[key] = parsedLine[index];
+					} else if (type === 'number') {
+						object[key] = Number(parsedLine[index]);
+
+						if (Number.isNaN(object[key])) {
+							reading = false;
+						}
 					}
+				}
+
+				if (reading) {
+					onChange(object);
 				}
 			}
 
-			if (reading) {
-				onChange(object);
+			if (processedLine === WANTED_STRING) {
+				reading = true;
 			}
-		}
-		
-		if (processedLine === WANTED_STRING) {
-			reading = true;
 		}
 	}
 });
 
+setInterval(() => {
+	if (ticksLeft) {
+		socket.write(`${COMMAND}\n`);
+	
+		ticksLeft--;
+	}
+}, Math.floor(1000 / TICK_RATE)).unref();
+
 socket.setEncoding('utf8');
 
-setInterval(() => {
-	socket.write(`${COMMAND}\n`);
-}, Math.floor(1000 / TICK_RATE));
+// Other useful things:
+// - bomb_planted (0s defuser)
+// - weapon_reload, player_blind (useful on 1v1)
+// - hegrenade_detonate and/or inferno_startburn combined with player_hurt (useful in all situations).
 
 /*
                            Name  Out    In  OutBits InBits  OutSize InSize  Notes
