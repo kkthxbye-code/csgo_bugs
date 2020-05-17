@@ -4,8 +4,8 @@ const readline = require('readline');
 const path = require('path');
 
 /*
-alias +hitmarker_attack "net_dumpeventstats; +attack; hitmarker_on";
-alias -hitmarker_attack "-attack; hitmarker_off";
+alias +hitmarker_attack "net_dumpeventstats; +attack; echo hitmarker_on";
+alias -hitmarker_attack "-attack; echo hitmarker_off";
 bind mouse1 +hitmarker_attack;
 */
 
@@ -73,12 +73,12 @@ const socket = net.connect(port, '127.0.0.1', async () => {
 	for await (const line of reader) {
 		const processedLine = line.replace(whitespaceRegExp, ' ').trim();
 
-		if (processedLine === 'Unknown command: hitmarker_on') {
+		if (processedLine === 'hitmarker_on') {
 			clearTimeout(timeout);
 			ticksLeft = Infinity;
 
 			socket.write(`cl_crosshaircolor 5; cl_crosshaircolor_r 0; cl_crosshaircolor_g 255; cl_crosshaircolor_b 0\n${COMMAND}\n`);
-		} else if (processedLine === 'Unknown command: hitmarker_off') {
+		} else if (processedLine === 'hitmarker_off') {
 			ticksLeft = 1;
 		} else {
 			if (reading) {
@@ -127,6 +127,11 @@ setInterval(() => {
 }, Math.floor(1000 / TICK_RATE)).unref();
 
 socket.setEncoding('utf8');
+
+// Other useful things:
+// - bomb_planted (0s defuser)
+// - weapon_reload, player_blind (useful on 1v1)
+// - hegrenade_detonate and/or inferno_startburn combined with player_hurt (useful in all situations).
 
 /*
                            Name  Out    In  OutBits InBits  OutSize InSize  Notes
