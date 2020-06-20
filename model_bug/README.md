@@ -12,6 +12,8 @@ I will be using the official map de_cache as an example in this issue.
 
 https://streamable.com/gob4m
 
+Same issue being used in Team Fortress 2 : https://www.youtube.com/watch?v=J6-YtN9352E
+
 ### Your system information
 
 OS agnostic
@@ -43,6 +45,8 @@ The chosen prop should now be unloaded with the following error in console: Erro
 ### Video example:
 
 https://streamable.com/gob4m
+
+https://www.youtube.com/watch?v=J6-YtN9352E
 
 ### Disclosure
 
