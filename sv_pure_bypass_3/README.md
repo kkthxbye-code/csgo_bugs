@@ -33,5 +33,5 @@ It is unsure whether it will get you kicked or not. More feedback needed.
 ### Credits
 
 * [DepoSit](https://www.youtube.com/watch?v=aL2rQzhFTn4) for discovering the bug on Danger Zone servers.
-* @mbhound for further testing on matchmaking servers.
-* @szmarczak for preparing the `pak01_008.vpk_` file.
+* [@mbhound](https://github.com/mbhound) for further testing on matchmaking servers.
+* [@szmarczak](https://github.com/szmarczak) for preparing the `pak01_008.vpk_` file.
