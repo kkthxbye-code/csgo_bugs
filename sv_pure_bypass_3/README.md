@@ -28,7 +28,7 @@ If you run `sv_pure_listfiles`, you can see that all files are verified. Althoug
 File c:\program files (x86)\steam\steamapps\common\counter-strike global offensive\csgo\pak01_008.vpk offset 2500000 hash 5455e4ec6e85785e16057104a706b2b5 does not match ( should be bf8792d18d795a2cf3f8ec268be2eb2b )
 ```
 
-It is unsure whether it will get kicked or not. More feedback needed.
+It is unsure whether it will get you kicked or not. More feedback needed.
 
 ### Credits
 
