@@ -11,6 +11,7 @@ It seems that this is implemented poorly and for some `pak01_###.vpk` files it's
 
 ### Steps
 
+0. Download this [`pak01_008.vpk_`](https://gofile.io/d/CkZmXs) or generate one using the instructions below.
 1. Make sure CS:GO is closed.
 2. Rename the original `pak01_008.vpk` to `pak01_008.vpk.bak`.
 3. Copy `pak01_008.vpk_` into the `csgo` folder. Do not delete the trailing `_` yet!
@@ -29,6 +30,17 @@ File c:\program files (x86)\steam\steamapps\common\counter-strike global offensi
 ```
 
 It is unsure whether it will get you kicked or not. More feedback needed.
+
+#### Generating `pak01_008.vpk` with wallhacks
+
+It's pretty simple. You just need [Node.js](https://nodejs.org/en/download/current/) to be able to run the script. All it does it creates a copy of `pak01_008.vpk` file named `pak01_008.vpkwh`. It replaces `"$ambientreflectionboost" "someValueHere"`, `"$phongalbedoboost" "someValueHere"` and `"$rimlightalbedo" "someValueHere"` with `"$ignorez" "1"` and keeps the file size the same.
+
+1. Copy the `generateWallhack.js` file to `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo`.
+2. Open Windows Command Prompt. Execute
+```
+cd "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"
+```
+3. Run `node generateWallhack.js`.
 
 ### Credits
 
