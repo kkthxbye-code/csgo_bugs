@@ -1,12 +1,17 @@
 ## sv\_pure bypass (for some files)
+
+*Fixed 7/29/2020*
+
 Official valve servers, and most community servers, run with `sv_pure 1`. This causes the client to send crc hashes of the files defined in `pure_server_whitelist.txt` to the server. The server then matches the hashes and kicks the player if there is a mismatch.
 
 It seems that this is implemented poorly and for some files it's possible to bypass this check. If the file is loaded on game launch, and then again on map load, the CRC is generated on game launch, but not regenerated on map load. This makes it possible to load the game, then replace the file and not be kicked on sv_pure 1 servers.
 
 ### Caveats
+
 I didn't do a lot of testing of this, so I pretty much just focused on the easiest file to exploit (soundmixers.txt). There are other files that are loaded on map load, like a bunch of shaders, and some other files in the script folder, but nothing really stood out as interesting or easy to test. It might be possible that the pak files can be modified after load, but it seemed like too much work to verify. Someone should check it out.
 
 ### soundmixers.txt example
+
 In the soundmixer folder is a fully automated script, for using a custom soundmixers.txt file on sv_pure 1 servers.
 
 The manual process is very easy though:
