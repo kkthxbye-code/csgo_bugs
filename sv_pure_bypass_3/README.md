@@ -2,7 +2,7 @@
 
 Official valve servers, and most community servers, run with `sv_pure 1`. This causes the client to send crc hashes of the files defined in `pure_server_whitelist.txt` to the server. The server then matches the hashes and kicks the player if there is a mismatch.
 
-It seems that this is implemented poorly and for some `pak01_###.vpk` files it's possible to bypass this check.  As `sv_pure_allow_missing_files ` defaults to `0`, you can join the server without `pak01_008.vpk`. It contains some [VMT](https://developer.valvesoftware.com/wiki/Material) definitions, and when they are missing, agents will be pure black because of missing skins.
+It seems that this is implemented poorly and for some `pak01_###.vpk` files it's possible to bypass this check.  As `sv_pure_allow_missing_files ` defaults to `1`, you can join the server without `pak01_008.vpk`. It contains some [VMT](https://developer.valvesoftware.com/wiki/Material) definitions, and when they are missing, agents will be pure black because of missing skins.
 
 ### Caveats
 
