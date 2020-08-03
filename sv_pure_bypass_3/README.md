@@ -7,7 +7,7 @@ It seems that this is implemented poorly and for some `pak01_###.vpk` files it's
 ### Caveats
 
 1. Some VPK files are required to be present at the game startup, e.g. `pak01_006.vpk`, otherwise the game will crash.
-2. Sometimes you may end up getting a [file mismatch](https://support.steampowered.com/kb_article.php?ref=8285-YOAZ-6049) error.
+2. Sometimes you may end up getting a [file mismatch](https://support.steampowered.com/kb_article.php?ref=8285-YOAZ-6049) error. If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
 
 ### Steps
 
