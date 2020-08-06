@@ -23,7 +23,7 @@ It seems that this is implemented poorly and for some `pak01_###.vpk` files it's
 8. Change shader settings to high / low.
 10. Profit! VAC-proof wallhack.
 
-**Note:** you need to perform these steps only *once*.
+**Note:** you need to perform these steps only *once*, unless you get kicked.
 
 ### Steps (II method)
 
