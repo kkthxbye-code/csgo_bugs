@@ -7,9 +7,11 @@ It seems that this is implemented poorly and for some `pak01_###.vpk` files it's
 ### Caveats
 
 1. Some VPK files are required to be present at the game startup, e.g. `pak01_006.vpk`, otherwise the game will crash.
-2. Sometimes you may end up getting a [file mismatch](https://support.steampowered.com/kb_article.php?ref=8285-YOAZ-6049) error. If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
+2. Sometimes you may end up getting a [file mismatch](https://support.steampowered.com/kb_article.php?ref=8285-YOAZ-6049) error. In that case you need to redo the steps, which shouldn't take more than a minute.
 
 ### Steps (I method)
+
+**Note:** You can get kicked while being in-game, although there is a chance that you can keep playing indefinitely.
 
 0. Download this [`pak01_008.vpk_`](https://gofile.io/d/CkZmXs) or generate one using the instructions below.
 1. Make sure CS:GO is closed.
@@ -24,6 +26,8 @@ It seems that this is implemented poorly and for some `pak01_###.vpk` files it's
 **Note:** you need to perform these steps only *once*.
 
 ### Steps (II method)
+
+**Note:** If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
 
 0. Download this [`pak01_008.vpk_`](https://gofile.io/d/CkZmXs) or generate one using the instructions below.
 1. Make sure CS:GO is closed.
