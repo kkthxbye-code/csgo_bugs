@@ -1,4 +1,5 @@
 ~~I post bugs, tricks, exploits and other stuff here when I feel like it.~~
+
 As there are more people contributing now, this is a general repo for all csgo exploits that provide a competitive advantage.
 
 Why post stuff like this in public? Valve doesn't care anymore, see the [model_bug](model_bug).
