@@ -13,7 +13,11 @@ After you execute the commands above, you're pretty much done. All you need is t
 
 You need to launch CS:GO with the modified `.vpk` files already. Normally you'd get kicked by `sv_pure` when connecting but this exploit bypasses that.
 
-Get the `.vpk` files here: https://fromsmash.com/4fSt2~vu1T-dt
+Get the `.vpk` files here: https://drive.google.com/file/d/1-Y9B-2iGCX_6zsM1UQmcO6jdz9sD6Ig1/view?usp=sharing
+
+Here's a custom AK model: https://drive.google.com/file/d/1DsBvN8eE3XZmdqcnAheAYpq9O62PwnPL/view?usp=sharing
+
+<!-- https://fromsmash.com/4fSt2~vu1T-dt -->
 
 Alternatively, you can generate them by yourself. Just extract the files using [GCFScape](https://developer.valvesoftware.com/wiki/GCFScape). Then, modify them as you wish. The end step is:
 
