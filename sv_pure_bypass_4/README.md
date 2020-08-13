@@ -13,9 +13,33 @@ After you execute the commands above, you're pretty much done. All you need is t
 
 You need to launch CS:GO with the modified `.vpk` files already. Normally you'd get kicked by `sv_pure` when connecting but this exploit bypasses that.
 
+<details>
+<summary>Preview</summary>
+
+![image](https://user-images.githubusercontent.com/36894700/90197454-fb756e00-ddce-11ea-8428-539f1c6e58b4.png)
+
+</details>
+
 Get the `.vpk` files here: https://drive.google.com/file/d/1-Y9B-2iGCX_6zsM1UQmcO6jdz9sD6Ig1/view?usp=sharing
 
+<details>
+<summary>Preview</summary>
+
+![image](https://user-images.githubusercontent.com/36894700/90197446-f3b5c980-ddce-11ea-99d2-c38b56948940.png)
+
+</details>
+
 Here's a custom AK model: https://drive.google.com/file/d/1DsBvN8eE3XZmdqcnAheAYpq9O62PwnPL/view?usp=sharing
+
+
+<details>
+<summary>Preview</summary>
+
+![image](https://user-images.githubusercontent.com/36894700/90197599-61fa8c00-ddcf-11ea-9997-34d49afa836b.png)
+
+</details>
+
+miRage wallhack: https://drive.google.com/file/d/1OoWV3Q4cSqaDvMBzs5gIvMtiISxMLeND/view?usp=sharing
 
 <!-- https://fromsmash.com/4fSt2~vu1T-dt -->
 
