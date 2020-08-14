@@ -54,4 +54,4 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\cs
 ### Credits
 
 * [@szmarczak](https://github.com/szmarczak) for discovering the bug.
-* [@mbhound](https://github.com/mbhound) for testing.
+* [@mbhound](https://github.com/mbhound) for making the VPK file for the custom AK model and for the help with creating the `miRage wallhack`.
