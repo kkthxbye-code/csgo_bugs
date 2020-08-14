@@ -1,0 +1,16 @@
+It is very easy to bypass the trusted mode at 12, while using it and loading any .dll libraries (Nvidia FreeStyle, Discord Overlay, OBS Studio and of course the .dll cheat)
+
+I talked about this in my video on July 29: https://www.youtube.com/watch?v=q0gn5GlkTzw
+
+You need to go to the Steam folder, then \ userdata \ your profile \ 730 \ local \ cfg, open the trustedlaunch.cfg file and leave only the value SUCCESS: 0xe (if different, change it), save, close. After that, you need to make the file read only.
+
+Right-click on file> properties> attributes: read-only (apply).
+
+Then start the game and enter trusted_launch_info into the console (if the mode is not enabled, try to start the official game, you will be prompted to restart the game in trusted mode - click). Then again check the trusted mode with the trusted_launch_info command.
+
+It should be like this:
+
+CS: GO was launched in Trusted Launch mode
+No files were blocked from loading in CS: GO
+
+You just hide the notification that the game is not running in trusted mode by pressing ESC and go to the server.
