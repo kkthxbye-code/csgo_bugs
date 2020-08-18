@@ -19,23 +19,6 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 
 To disable wallhacks simply close CS:GO and run `./disable_wallhack.sh`.
 
-### Steps (II method)
-
-**Note**: If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
-
-0. Download this [`pak01_008.vpk`](https://fromsmash.com/uDOWYW8HOL-dt) or generate it using the instructions below.
-1. Make sure CS:GO is closed.
-2. Run `./prepare.sh`
-3. Launch CS:GO.
-4. Join any server.
-5. Disconnect from the server.
-6. Run `./enable_wallhack.sh`.
-7. Reconnect.
-8. Switch shader settings to high / low.
-9. Profit! VAC-proof wallhack.
-
-To disable wallhacks simply close CS:GO and run `./disable_wallhack.sh`.
-
 ### Maps
 
 * Nuke: CTs & Ts
