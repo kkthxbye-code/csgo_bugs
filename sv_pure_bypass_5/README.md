@@ -4,7 +4,9 @@ Official Valve servers, and most community servers, run with `sv_pure 1`. This c
 
 It seems that this is **still!** implemented poorly and for some `pak01_###.vpk` files it's possible to bypass this check. For example, you can join any server with the `pak01_008.vpk` being empty. It contains some [VMT](https://developer.valvesoftware.com/wiki/Material) definitions, and when they are missing, the textures of agents will be black because of missing skins.
 
-### Steps
+### Steps (I method)
+
+**Note**: You can get kicked while being in-game, although there is a chance that you can keep playing indefinitely.
 
 0. Download this [`pak01_008.vpk`](https://fromsmash.com/uDOWYW8HOL-dt) or generate it using the instructions below.
 1. Make sure CS:GO is closed.
@@ -14,6 +16,23 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 5. Run `./enable_wallhack.sh`.
 6. Switch shader settings to high / low.
 7. Profit! VAC-proof wallhack.
+
+To disable wallhacks simply close CS:GO and run `./disable_wallhack.sh`.
+
+### Steps (II method)
+
+**Note**: If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
+
+0. Download this [`pak01_008.vpk`](https://fromsmash.com/uDOWYW8HOL-dt) or generate it using the instructions below.
+1. Make sure CS:GO is closed.
+2. Run `./prepare.sh`
+3. Launch CS:GO.
+4. Join any server.
+5. Disconnect from the server.
+6. Run `./enable_wallhack.sh`.
+7. Reconnect.
+8. Switch shader settings to high / low.
+9. Profit! VAC-proof wallhack.
 
 To disable wallhacks simply close CS:GO and run `./disable_wallhack.sh`.
 
