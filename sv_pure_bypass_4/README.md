@@ -1,5 +1,7 @@
 ## sv\_pure bypass \#4
 
+*Fixed [17-08-2020](https://blog.counter-strike.net/index.php/2020/08/31374/)*
+
 This exploit allows you to modify *whatever* the `.vpk` file (including the `pak01_dir.vpk`) and even `items_game.txt` (basically free skin changer).
 
 ```
