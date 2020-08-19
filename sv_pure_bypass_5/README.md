@@ -21,6 +21,8 @@ To disable wallhacks simply close CS:GO and run `./disable_wallhack.sh`.
 
 ### Steps (II method)
 
+https://www.youtube.com/watch?v=xmO5AQNs6r4
+
 **Note**: For this method to work you need to place [`video.txt`](video.txt) inside `~/.local/share/Steam/userdata/[steam_id]/730/local/cfg`.
 
 **Note**: If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
