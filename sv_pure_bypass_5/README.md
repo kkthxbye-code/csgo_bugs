@@ -34,8 +34,8 @@ https://www.youtube.com/watch?v=xmO5AQNs6r4
 4. Join any server.
 5. Disconnect from the server.
 6. Run `./enable_wallhack.sh`.
-7. Reconnect.
-8. Switch shader settings to high / low.
+7. Switch shader settings to high / low.
+8. Reconnect.
 9. Profit! VAC-proof wallhack.
 
 To disable wallhacks simply close CS:GO and run `./disable_wallhack.sh`.
