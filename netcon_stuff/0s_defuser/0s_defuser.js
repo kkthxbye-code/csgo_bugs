@@ -10,7 +10,7 @@ const config = {
 	pingMultiplier: 1,
 
 	// If you get 0.02 instead of 0.000, you can try setting this to -10.
-	pingOffset: 0,
+	pingOffset: 5,
 
 	ms: {
 		tick: Math.ceil(1000 / 64),
