@@ -74,7 +74,7 @@ const socket = net.connect(port, '127.0.0.1', async () => {
 			clearTimeout(timeout);
 			ticksLeft = Infinity;
 
-			socket.write(`cl_crosshaircolor 5; cl_crosshaircolor_r 0; cl_crosshaircolor_g 255; cl_crosshaircolor_b 0\n${COMMAND}\n`);
+			socket.write(`cl_crosshaircolor 5; cl_crosshaircolor_r 0; cl_crosshaircolor_g 255; cl_crosshaircolor_b 0\n`);
 		} else if (processedLine === 'hitmarker_off') {
 			ticksLeft = 1;
 		} else {
