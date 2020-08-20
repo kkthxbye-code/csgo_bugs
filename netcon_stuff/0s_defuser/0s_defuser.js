@@ -10,7 +10,6 @@ const config = {
 	pingMultiplier: 1,
 
 	// If you get 0.02 instead of 0.000, you can try setting this to -10.
-	// If it doesn't help, change the `pingMultiplier` to 0.5 or lower.
 	pingOffset: 0,
 
 	ms: {
@@ -63,6 +62,8 @@ let timeout5s;
 
 let explosionTime = 0;
 
+let isSafeNow = false;
+
 const sendOnConnect = `developer 1;
 con_filter_enable 2;
 con_filter_text "Time until explosion: ";
@@ -73,18 +74,15 @@ name;
 `;
 
 const onChange = data => {
-	const hasPrevious = data.Name in previousNetStats;
-
-	if (!hasPrevious) {
-		previousNetStats[data.Name] = data;
-		return;
-	}
-
-	if (previousNetStats[data.Name].In === data.In) {
+	if ((data.Name in previousNetStats) && previousNetStats[data.Name].In === data.In) {
 		return;
 	}
 
 	previousNetStats[data.Name] = data;
+
+	if (!isSafeNow) {
+		return;
+	}
 
 	if (data.Name === 'bomb_planted') {
 		if (explosionTime !== 0) {
@@ -148,6 +146,10 @@ const socket = net.connect(port, '127.0.0.1', async () => {
 
 			socket.write(`clear\n${pingCommand}net_dumpeventstats\necho "${constants.autodefuse.timeUntilExplosion}: ${timeUntilExplosion}s ${constants.autodefuse[config.defuseMode]}"\n`);
 		}, config.ms.tick).unref();
+
+		setTimeout(() => {
+			isSafeNow = true;
+		}, 10 * config.ms.tick).unref();
 	}
 
 	// Read data
