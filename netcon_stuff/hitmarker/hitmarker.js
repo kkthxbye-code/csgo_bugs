@@ -9,9 +9,6 @@ alias -hitmarker_attack "-attack; echo hitmarker_off";
 bind mouse1 +hitmarker_attack;
 */
 
-// If your FPS drops, change this to 10.
-const TICK_RATE = 64;
-
 let ticksLeft = 0;
 let previous = {};
 let timeout;
@@ -124,6 +121,6 @@ setInterval(() => {
 	
 		ticksLeft--;
 	}
-}, Math.floor(1000 / TICK_RATE)).unref();
+}, 75).unref();
 
 socket.setEncoding('utf8');
