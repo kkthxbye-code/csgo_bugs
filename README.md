@@ -17,3 +17,5 @@ Why post stuff like this in public? Valve doesn't care anymore, see the [model_b
 | sv_pure_bypass_5   | No       | 06-08-2020 |             | [@szmarczak](https://github.com/szmarczak) |
 | con_logfile_tricks | Somewhat | ??-??-2018 | [26-08-2020](https://blog.counter-strike.net/index.php/2020/08/31476/) | [@kkthxbye-code](https://github.com/kkthxbye-code) |
 | netcon_stuff       | No       | ??-03-2020 | [26-08-2020](https://blog.counter-strike.net/index.php/2020/08/31476/) | [@403-fruit](https://github.com/403-Fruit) and [@szmarczak](https://github.com/szmarczak) |
+| con_logfile_tricks | Partially | ??-??-2018 |             | [@kkthxbye-code](https://github.com/kkthxbye-code) |
+| netcon_stuff       | Yes       | ??-03-2020 | [26-08-2020](https://blog.counter-strike.net/index.php/2020/08/31476/) | [@403-fruit](https://github.com/403-Fruit) and [@szmarczak](https://github.com/szmarczak) |
