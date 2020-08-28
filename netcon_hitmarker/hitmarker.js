@@ -11,6 +11,7 @@ if (process.argv.length !== 3 || !port) {
 
 let ticksLeft = 0;
 let timeout;
+let hit = false;
 
 const sendOnConnect = `alias +hitmarker_attack "+attack; echo hitmarker_on";
 alias -hitmarker_attack "-attack; echo hitmarker_off";
@@ -37,7 +38,7 @@ const socket = net.connect(port, '127.0.0.1', async () => {
 	setInterval(() => {
 		if (ticksLeft) {
 			socket.write(`soundinfo\n`);
-		
+
 			ticksLeft--;
 		}
 	}, 75);
@@ -54,16 +55,20 @@ const socket = net.connect(port, '127.0.0.1', async () => {
 			ticksLeft = Infinity;
 
 			socket.write(resetCrosshair);
+			hit = false;
 		} else if (line === 'hitmarker_off') {
 			ticksLeft = 5;
-		} else if (hits.map(x => line.includes(x)).indexOf(true) !== -1) {
+		} else if (hits.map(x => line.includes(x)).includes(true) && !hit) {
 			clearTimeout(timeout);
 
-			socket.write(`cl_hud_color 10; cl_crosshaircolor 5; cl_crosshaircolor_r 255; cl_crosshaircolor_g 0; cl_crosshaircolor_b 0; echo Hit!\n`);
-			
+			socket.write(`cl_hud_color 10; cl_crosshaircolor 5; cl_crosshaircolor_r 255; cl_crosshaircolor_g 0; cl_crosshaircolor_b 0; echo Hit!; play buttons/arena_switch_press_02\n`);
+
 			timeout = setTimeout(() => {
 				socket.write(resetCrosshair);
+				hit = false;
 			}, 400);
+
+			hit = true;
 		}
 	}
 });
