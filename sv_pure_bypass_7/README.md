@@ -9,7 +9,8 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 #### Part 1
 
 * [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) | [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
-* Modified `mirror.exe` Dokany example:
+
+**Optionally**, if you don't trust our modified `mirror.exe` (a Dokany example), you can compile one by yourself:
 
 Replace
 
@@ -21,7 +22,7 @@ with
         CreateFile(filePath, genericDesiredAccess, 3,
 ```
 
-then recompile with Visual Studio, or use the one provided with this directory.
+then recompile with Visual Studio.
 
 #### Part 2
 
@@ -41,22 +42,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 Place [`video.txt`](video.txt) inside `C:\Program Files (x86)\Steam\Steam\userdata\[steam_id]\730\local\cfg`.
 
-### Steps (I method)
-
-0. Make sure CS:GO is closed.
-1. Download this [`pak01_008.vpk`](https://fromsmash.com/.0~6FIzQYu-dt) or generate it using the instructions below. Place it in the `csgo_bak` folder.
-2. Open it in `notepad++` (make sure it's `csgo_bak` and NOT `csgo`).
-3. `CTRL+A` + `BACKSPACE` + `CTRL+S`. DO NOT CLOSE `notepad++` YET.
-4. Launch CS:GO.
-5. Join any server.
-6. Switch back to the `notepad++` window.
-7. `CTRL+Z` + `CTRL+S`.
-8. Switch shader settings to high / low.
-9. Profit! VAC-proof wallhack.
-
-To disable wallhacks simply verify game files.
-
-### Steps (II method)
+### Steps (main method)
 
 0. Make sure CS:GO is closed.
 1. Download this [`pak01_008.vpk`](https://fromsmash.com/.0~6FIzQYu-dt) or generate it using the instructions below. Place it in the `csgo_bak` folder.
@@ -68,7 +54,23 @@ To disable wallhacks simply verify game files.
 7. Switch back to the `notepad++` window.
 8. `CTRL+Z` + `CTRL+S`.
 9. Switch shader settings to high / low.
-10. Profit! VAC-proof wallhack.
+10. Reconnect.
+11. Profit! VAC-proof wallhack.
+
+To disable wallhacks simply verify game files.
+
+### Steps (alternative method)
+
+0. Make sure CS:GO is closed.
+1. Download this [`pak01_008.vpk`](https://fromsmash.com/.0~6FIzQYu-dt) or generate it using the instructions below. Place it in the `csgo_bak` folder.
+2. Open it in `notepad++` (make sure it's `csgo_bak` and NOT `csgo`).
+3. `CTRL+A` + `BACKSPACE` + `CTRL+S`. DO NOT CLOSE `notepad++` YET.
+4. Launch CS:GO.
+5. Join any server.
+6. Switch back to the `notepad++` window.
+7. `CTRL+Z` + `CTRL+S`.
+8. Switch shader settings to high / low.
+9. Profit! VAC-proof wallhack.
 
 To disable wallhacks simply verify game files.
 
