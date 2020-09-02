@@ -27,7 +27,11 @@ then recompile with Visual Studio, or use the one provided with this directory.
 
 1. Rename `csgo` to `csgo_bak`.
 2. Create an empty `csgo` directory.
-3. Run `run_mirror` (with administrator privilege).
+3. Run this with with administrator privileges:
+
+```
+mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bak" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo
+```
 
 Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` directory to `csgo`. The patch above is needed, so the `.vpk` files won't be locked when `csgo.exe` is running.
 
