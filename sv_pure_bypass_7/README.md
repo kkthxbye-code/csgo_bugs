@@ -23,7 +23,7 @@ with
 
 then recompile with Visual Studio, or use the one provided with this directory.
 
-### Part 2
+#### Part 2
 
 1. Rename `csgo` to `csgo_bak`.
 2. Create an empty `csgo` directory.
@@ -37,7 +37,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 **Note:** If the mirror fails, make sure to close all Explorer windows!
 
-### Part 3
+#### Part 3
 
 Place [`video.txt`](video.txt) inside `C:\Program Files (x86)\Steam\Steam\userdata\[steam_id]\730\local\cfg`.
 
