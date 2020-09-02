@@ -9,6 +9,7 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 **Note**: You can get kicked while being in-game, although there is a chance that you can keep playing indefinitely.
 
 0. Download this [`pak01_008.vpk`](https://fromsmash.com/uDOWYW8HOL-dt) or generate it using the instructions below.
+0.1. Rename it to `pak01_008.vpk.wh` and place inside the `csgo` folder.
 1. Make sure CS:GO is closed.
 2. Run `./prepare.sh`
 3. Launch CS:GO.
@@ -27,7 +28,8 @@ https://www.youtube.com/watch?v=xmO5AQNs6r4
 
 **Note**: If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
 
-0. Download this [`pak01_008.vpk`](https://fromsmash.com/uDOWYW8HOL-dt) or generate it using the instructions below.
+0. Download this [`pak01_008.vpk`](https://fromsmash.com/I_dUOH9a5I-dt) or generate it using the instructions below.
+0.1. Rename it to `pak01_008.vpk.wh` and place inside the `csgo` folder.
 1. Make sure CS:GO is closed.
 2. Run `./prepare.sh`
 3. Launch CS:GO.
