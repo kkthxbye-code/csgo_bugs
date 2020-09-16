@@ -80,7 +80,7 @@ To disable wallhacks simply verify game files.
 
 * Mirage: CTs
 * Vertigo: CTs
-* Inferno: CTs
+* ~Inferno: CTs~
 * Office: CTs
 * Agency: CTs
 * Mutiny: CTs
