@@ -78,8 +78,8 @@ To disable wallhacks simply verify game files.
 
 * Nuke: CTs & Ts
 
-* Mirage: CTs
-* ~Vertigo: CTs~
+* ~Mirage: CTs~
+* ~Vertigo: CTs~ (sometimes works?)
 * ~Inferno: CTs~
 * Office: CTs
 * Agency: CTs
