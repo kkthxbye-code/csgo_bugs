@@ -45,7 +45,7 @@ Place [`video.txt`](video.txt) inside `C:\Program Files (x86)\Steam\Steam\userda
 ### Steps (main method)
 
 0. Make sure CS:GO is closed.
-1. Download this [`pak01_008.vpk`](https://fromsmash.com/.0~6FIzQYu-dt) or generate it using the instructions below. Place it in the `csgo_bak` folder.
+1. Download this [`pak01_008.vpk`](https://fromsmash.com/701vWE2-C5-dt) or generate it using the instructions below. Place it in the `csgo_bak` folder.
 2. Open it in `notepad++` (make sure it's `csgo_bak` and NOT `csgo`).
 3. `CTRL+A` + `BACKSPACE` + `CTRL+S`. DO NOT CLOSE `notepad++` YET.
 4. Launch CS:GO.
@@ -62,7 +62,7 @@ To disable wallhacks simply verify game files.
 ### Steps (alternative method)
 
 0. Make sure CS:GO is closed.
-1. Download this [`pak01_008.vpk`](https://fromsmash.com/.0~6FIzQYu-dt) or generate it using the instructions below. Place it in the `csgo_bak` folder.
+1. Download this [`pak01_008.vpk`](https://fromsmash.com/701vWE2-C5-dt) or generate it using the instructions below. Place it in the `csgo_bak` folder.
 2. Open it in `notepad++` (make sure it's `csgo_bak` and NOT `csgo`).
 3. `CTRL+A` + `BACKSPACE` + `CTRL+S`. DO NOT CLOSE `notepad++` YET.
 4. Launch CS:GO.
