@@ -55,8 +55,6 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 ### Steps (II method)
 
-**Note**: For this method to work you need to place [`video.txt`](video.txt) inside `~/.local/share/Steam/userdata/[steam_id]/730/local/cfg`.
-
 **Note**: If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
 
 1. Run `disable_wallhack.cmd`
