@@ -18,6 +18,6 @@ This exploit, if done like in the gif, is invisible to Overwatch. (Basically Leg
 1. https://github.com/click4dylan/CSGO_FakeAngleFix really simple fix, explained more in detail here: https://www.unknowncheats.me/forum/counterstrike-global-offensive/331325-tickbase-manipulation.html
 2. https://i.imgur.com/ooBl57i.png
 
-#### Reasoning for reposting the same information in this reposting
+#### Reasoning for reposting the same information here
 
 This exploit basically makes CS:GO unplayable in low to mid trust-factor and as it is invisible to Overwatch, you can't just report the enemy for using it because nothing will happen. It's one of the reasons CS:GO is the cheater hellhole it currently is. This is the only repo I've seen that actually gets Valve's attention, so I'm trying my luck at finally getting this fixed.
