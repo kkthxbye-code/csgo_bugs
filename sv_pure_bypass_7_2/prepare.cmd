@@ -3,7 +3,7 @@
 set CSGO="C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"
 
 if exist pak01_008.vpk.wh (
-	copy pak01_008.vpk.wh "%CSGO%\pak01_008.vpk.wh" /B /Y
+	copy pak01_008.vpk.wh %CSGO%\pak01_008.vpk.wh /B /Y
 )
 
 cd /D %CSGO%
