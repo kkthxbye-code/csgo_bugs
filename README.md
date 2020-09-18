@@ -17,7 +17,8 @@ Why post stuff like this in public? Valve doesn't care anymore, see the [model_b
 | sv_pure_bypass_5   | Yes       | 06-08-2020 | [17-09-2020](https://blog.counter-strike.net/index.php/2020/09/31687/) | [@szmarczak](https://github.com/szmarczak) |
 | sv_pure_bypass_5_2 | No        | 18-09-2020 |             | [@szmarczak](szmarczak) |
 | sv_pure_bypass_6   | Yes       | 21-08-2020 | [01-09-2020](https://blog.counter-strike.net/index.php/2020/09/31532/) | [@kkthxbye-code](https://github.com/kkthxbye-code) |
-| sv_pure_bypass_7   | No        | 10-08-2020 |             | [@szmarczak](szmarczak) |
+| sv_pure_bypass_7   | Yes       | 10-08-2020 | [17-09-2020](https://blog.counter-strike.net/index.php/2020/09/31687/) | [@szmarczak](szmarczak) |
+| sv_pure_bypass_7_2 | No        | 18-09-2020 |             | [@szmarczak](szmarczak) |
 | con_logfile_tricks | Yes       | ??-??-2018 | [01-09-2020](https://blog.counter-strike.net/index.php/2020/09/31532/) | [@kkthxbye-code](https://github.com/kkthxbye-code) |
 | netcon_stuff       | Yes       | ??-03-2020 | [26-08-2020](https://blog.counter-strike.net/index.php/2020/08/31476/) | [@403-fruit](https://github.com/403-Fruit) and [@szmarczak](https://github.com/szmarczak) |
 | netcon_hitmarker   | Yes       | 10-08-2020 | [01-09-2020](https://blog.counter-strike.net/index.php/2020/09/31532/) | [DepoSit](https://youtu.be/T7ShZxNGr5E?t=226) and [@szmarczak](https://github.com/szmarczak) |
