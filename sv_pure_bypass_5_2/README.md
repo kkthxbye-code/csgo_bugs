@@ -14,14 +14,12 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 
 **Note**: You can get kicked while being in-game, although there is a chance that you can keep playing indefinitely.
 
-1. Close CS:GO.
-2. Run `./disable_wallhack.sh`
-3. Start CS:GO.
-4. Switch shader settings to high / low.
-5. Join any server.
-6. Run `./enable_wallhack.sh`.
-7. Switch shader settings to high / low.
-8. Profit! VAC-proof wallhack.
+1. Run `./disable_wallhack.sh`
+2. Switch shader settings to high / low.
+3. Join any server.
+4. Run `./enable_wallhack.sh`.
+5. Switch shader settings to high / low.
+6. Profit! VAC-proof wallhack.
 
 ### Steps (II method)
 
@@ -29,16 +27,14 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 
 **Note**: If you rejoin the server and aren't kicked immediately, you can keep playing indefinitely.
 
-1. Close CS:GO.
-2. Run `./disable_wallhack.sh`
-3. Start CS:GO.
-4. Switch shader settings to high / low.
-5. Join any server.
-6. Disconnect.
-7. Run `./enable_wallhack.sh`.
-8. Switch shader settings to high / low.
-9. Reconnect.
-10. Profit! VAC-proof wallhack.
+1. Run `./disable_wallhack.sh`
+2. Switch shader settings to high / low.
+3. Join any server.
+4. Disconnect.
+5. Run `./enable_wallhack.sh`.
+6. Switch shader settings to high / low.
+7. Reconnect.
+8. Profit! VAC-proof wallhack.
 
 ### Maps
 
