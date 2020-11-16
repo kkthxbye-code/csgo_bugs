@@ -7,7 +7,7 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 ### Prerequisites
 
 1. [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) | [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
-2. Download this [`pak01_008.vpk`](https://fromsmash.com/701vWE2-C5-dt) or generate it using the instructions below.
+2. Download this [`pak01_008.vpk`](https://drive.google.com/file/d/18keujp9OXI9L5mdv13dssTAhh4t_maJm/view?usp=sharing) or generate it using the instructions below.
 3. Rename it to `pak01_008.vpk.wh` and place inside the `csgo` folder.
 4. Run `prepare.cmd`
 5. Place [`video.txt`](video.txt) inside `C:\Program Files (x86)\Steam\Steam\userdata\[steam_id]\730\local\cfg`.
