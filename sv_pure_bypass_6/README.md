@@ -22,7 +22,7 @@ The vpk dirs are loaded before file hashing is disabled. You can still change al
 
 This exploit provides a sv_pure and VAC-safe wallhack. Always assume that services with own client (Faceit, ESEA) detects exploits like these.
 
-1. Download the required files: [mirror 1 (fromsmash.com)](https://fromsmash.com/g1d0XFebf6-dt) | [mirror 2 (gofile.io)](https://gofile.io/d/yc7Ctv).
+1. Download the required files: [download](https://drive.google.com/file/d/18keujp9OXI9L5mdv13dssTAhh4t_maJm/view?usp=sharing)
 2. Unzip all vpks in the csgo folder, replacing any existing files.
 3. Change the `gameinfo.txt` file as specified in the previous section.
 4. Start the game and play on any offical or third-party server.
