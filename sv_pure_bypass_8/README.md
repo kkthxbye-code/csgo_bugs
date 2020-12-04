@@ -28,9 +28,9 @@ then recompile with Visual Studio.
 
 0. Install [`Node.js`](https://nodejs.org/en/download/current/).
 1. If you're not running Windows, skip this step.
-  1.1. Install [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) - [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
-  1.2. Reboot the computer.
-  1.3. Download [`mirror.exe`](mirror.exe) or compile it using the instructions above.
+    1. Install [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) - [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
+    2. Reboot the computer.
+    3. Download [`mirror.exe`](mirror.exe) or compile it using the instructions above.
 2. Add `-netcon 2121` to launch options.
 3. Update `CSGO_EXE_DIR` and `VIDEO_FILE` constants in the `wallhack.js` file.
    Note that on Windows you need to use `\\` to add a backslash.
