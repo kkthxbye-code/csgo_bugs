@@ -1,6 +1,8 @@
 ## sv\_pure bypass \#8 (Windows, Linux, macOS)
 
-It took Valve 3 months to fix the recent (`sv_pure_bypass_5_2` and `sv_pure_bypass_7_2`) exploits. While they mostly fixed it, they have left something behind... Danger Zone.
+It took Valve 3 months to fix the recent (`sv_pure_bypass_5_2` and `sv_pure_bypass_7_2`) exploits.
+
+While they mostly fixed it, they have left something behind... Danger Zone.
 
 #### Compile mirror.exe (optional)
 
