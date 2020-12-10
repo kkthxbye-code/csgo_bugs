@@ -46,7 +46,7 @@ let wallhackProps = {};
 let isPakOverwritten = false;
 
 let PAK_PATH = isWindows ? `${CSGO_EXE_DIR}\\csgo\\` : `${CSGO_EXE_DIR}/csgo/`;
-const MIRROR_EXE = `${__dirname}\\mirror.exe`;
+const MIRROR_EXE = `${__dirname}\\passthrough-x64.exe`;
 const SHADER_REGEXP = /("setting.gpu_level"\s+")(\d)(")/;
 
 const connect = port => new Promise((resolve, reject) => {
@@ -62,6 +62,7 @@ const connect = port => new Promise((resolve, reject) => {
 
 		const cancel = () => {
 			clearTimeout(timeout);
+			resolve();
 		};
 
 		const timeout = setTimeout(() => {
@@ -151,7 +152,6 @@ const revert = async (properties, socket) => {
 		console.log('Renaming csgo_bak back to csgo...');
 
 		try {
-			await fs.rmdir(`${CSGO_EXE_DIR}\\csgo`);
 			await fs.rename(`${CSGO_EXE_DIR}\\csgo_bak`, `${CSGO_EXE_DIR}\\csgo`);
 		} catch (error) {
 			console.error(`Failed. Error code: ${error.code} - try closing CS:GO first.`);
@@ -170,7 +170,6 @@ const onPureServer = async socket => {
 
 	isPakOverwritten = true;
 
-	await wait(2000);
 	console.log('Got pure server! Overwriting the PAK files...');
 
 	await write(wallhackProps);
@@ -357,126 +356,100 @@ const findWallhackProps = buffer => {
 	return entries;
 };
 
+let socket;
+let mirror;
+
+process.stdin.resume();
+
 (async () => {
 	console.log('Tip: to revert changes simply close CS:GO. If closed already, press CTRL+C here.');
 	console.log('');
 
-	if (isWindows) {
-		console.log('Tip: in case of a mirror error:');
-		console.log(' - close all Windows Explorer windows,');
-		console.log(' - run this script as an administrator.');
-		console.log('');
-	}
+	for (const name of PAK_FILES) {
+		const buffer = await fs.readFile(PAK_PATH + name);
+		wallhackProps[name] = findWallhackProps(buffer);
 
-	try {
-		const now = Date.now();
+		console.log(`Found ${wallhackProps[name].length} properties in ${name}`);
 
-		for (const name of PAK_FILES) {
-			const buffer = await fs.readFile(PAK_PATH + name);
-			wallhackProps[name] = findWallhackProps(buffer);
+		if (wallhackProps[name].length) {
+			const BACKUP_FILE = `${PAK_PATH + name}.backup`;
 
-			console.log(`Found ${wallhackProps[name].length} properties in ${name}`);
-
-			if (wallhackProps[name].length) {
-				const BACKUP_FILE = `${PAK_PATH + name}.backup`;
-
-				const backupExists = await existsAsync(BACKUP_FILE);
-				if (backupExists) {
-					console.log('Backup already exists. Skipping.');
-				} else {
-					console.log('Creating backup...');
-					await fs.writeFile(BACKUP_FILE, buffer);
-					console.log(`Backup saved as ${basename(BACKUP_FILE)}`);
-				}
+			const backupExists = await existsAsync(BACKUP_FILE);
+			if (backupExists) {
+				console.log('Backup already exists. Skipping.');
+			} else {
+				console.log('Creating backup...');
+				await fs.writeFile(BACKUP_FILE, buffer);
+				console.log(`Backup saved as ${basename(BACKUP_FILE)}`);
 			}
 		}
+	}
 
-		let socket;
-		let mirror;
+	console.log('');
 
-		process.once('SIGINT', async () => {
-			if (socket && socket.destroyed) {
-				return;
-			}
+	if (isWindows) {
+		console.log('Renaming csgo to csgo_bak...');
+		await fs.rename(`${CSGO_EXE_DIR}\\csgo`, `${CSGO_EXE_DIR}\\csgo_bak`);
 
-			console.log('');
-			console.log('Forcing exit.');
+		console.log('Bypassing write access lock via WinFSP...');
 
-			const callback = async () => {
-				console.log('Reverting changes.');
+		mirror = spawn(MIRROR_EXE, ['-p', `${CSGO_EXE_DIR}\\csgo_bak`, '-m', `${CSGO_EXE_DIR}\\csgo`]);
 
-				try {
-					await revert(wallhackProps, socket);
-				} catch (error) {
-					console.error(error);
-				}
-			};
+		mirror.stdout.resume();
+		mirror.stderr.resume();
 
-			if (mirror) {
-				try {
-					console.log('Closing CS:GO.');
-					await execFile('taskkill', ['/f', '/im', 'csgo.exe']);
-				} catch {}
-
-				mirror.once('close', callback);
-				mirror.kill('SIGINT');
-			} else {
-				callback();
+		mirror.once('close', code => {
+			if (code === null) {
+				console.error(`${basename(MIRROR_EXE)} exited via ${mirror.signalCode}.`);
+			} else if (code !== 0) {
+				console.error(`${basename(MIRROR_EXE)} exited with error code ${code}`);
 			}
 		});
 
-		if (isWindows) {
-			console.log('Renaming csgo to csgo_bak...');
-			await fs.rename(`${CSGO_EXE_DIR}\\csgo`, `${CSGO_EXE_DIR}\\csgo_bak`);
-			await fs.mkdir(`${CSGO_EXE_DIR}\\csgo`);
+		PAK_PATH = `${CSGO_EXE_DIR}\\csgo_bak\\`;
 
-			console.log('Bypassing write access lock via Dokany...');
+		console.log('');
+	}
 
-			mirror = spawn(MIRROR_EXE, ['/r', `${CSGO_EXE_DIR}\\csgo_bak`, '/l', `${CSGO_EXE_DIR}\\csgo`]);
+	process.once('SIGINT', async () => {
+		console.log('');
 
-			mirror.stdout.resume();
-			mirror.stderr.resume();
-			// mirror.stderr.setEncoding('utf8');
-			// mirror.stderr.on('data', chunk => {
-			// 	console.log(`[mirror.exe stderr] ${chunk}`);
-			// });
-
-			mirror.once('close', code => {
-				if (code === null) {
-					console.error(`${basename(MIRROR_EXE)} exited via ${mirror.signalCode}.`);
-				} else if (code !== 0) {
-					console.error(`${basename(MIRROR_EXE)} exited with error code ${code}`);
-				}
-			});
-
-			PAK_PATH = `${CSGO_EXE_DIR}\\csgo_bak\\`;
+		if (mirror) {
+			try {
+				console.log('Closing CS:GO.');
+				await execFile('taskkill', ['/f', '/im', 'csgo.exe']);
+			} catch {}
 		}
 
-		console.log('You can now launch CS:GO.');
-		console.log(`Connecting to port ${NETCON_PORT}...`);
-		socket = await connect(NETCON_PORT);
+		process.stdin.pause();
+	});
 
-		// See https://github.com/ValveSoftware/csgo-osx-linux/issues/2554
-		await wait(2000);
+	console.log('You can now launch CS:GO.');
+	console.log(`Connecting to port ${NETCON_PORT}...`);
+
+	socket = await connect(NETCON_PORT);
+
+	if (socket) {
 		console.log('Connected! You can start playing now.');
 
 		await toggleUpdate(socket);
 		await runReader(socket);
 
 		console.log('Netcon server closed.');
-
-		if (mirror) {
-			mirror.kill('SIGINT');
-
-			await new Promise((resolve, reject) => {
-				mirror.once('close', resolve);
-				mirror.once('error', reject);
-			});
-		}
-
-		console.log('Reverting changes.');
-		await revert(wallhackProps, socket);
-	} catch (error) {
-		console.error(error);
+		console.log('');
 	}
+
+	if (mirror) {
+		mirror.kill('SIGINT');
+
+		await new Promise((resolve, reject) => {
+			mirror.once('close', resolve);
+			mirror.once('error', reject);
+		});
+	}
+
+	console.log('Reverting changes.');
+	await revert(wallhackProps, socket);
+
+	process.stdin.pause();
 })();
