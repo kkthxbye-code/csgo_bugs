@@ -21,7 +21,7 @@ While they mostly fixed it, they have left something behind... Danger Zone.
 7. Profit!
 8. To revert changes either close CS:GO or press CTRL+C in the terminal (this will close CS:GO on Windows).
 
-**Note:** If the wallhacks don't enable within 10s after you connect to a server you need to change shader settings manually.
+**Note:** If the wallhacks don't turn on within 10s after you connect to a server you need to change shader settings manually.
 
 ### Maps
 
