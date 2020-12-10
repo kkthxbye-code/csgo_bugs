@@ -21,7 +21,7 @@ While they mostly fixed it, they have left something behind... Danger Zone.
 7. Profit!
 8. To revert changes either close CS:GO or press CTRL+C in the terminal (this will close CS:GO on Windows).
 
-**Note:** Previous bypasses used [Dokany](https://github.com/dokan-dev/dokany). It got dropped because WinFSP is more stable.
+**Note:** If the wallhacks don't enable within 10s after you connect to a server you need to change shader settings manually.
 
 ### Maps
 
@@ -47,3 +47,5 @@ While they mostly fixed it, they have left something behind... Danger Zone.
 
 * [@szmarczak](https://github.com/szmarczak) for discovering the bug.
 * [@Billar42](https://github.com/Billar42) for noticing that replacing other VPK files will enable wallhacks on more maps.
+
+**Note:** Previous bypasses used [Dokany](https://github.com/dokan-dev/dokany). It got dropped because WinFSP is more stable.
