@@ -193,7 +193,8 @@ const runReader = async socket => {
 	for await (let line of reader) {
 		line = line.trim();
 
-		if (line.startsWith('R_RedownloadAllLightmaps took')) {
+		// line.startsWith('Got pure server whitelist: sv_pure = ') || line.startsWith('No pure server whitelist. sv_pure = ')
+		if (line === 'ChangeGameUIState: CSGO_GAME_UI_STATE_LOADINGSCREEN -> CSGO_GAME_UI_STATE_INGAME') {
 			await onPureServer(socket);
 		}
 	}
