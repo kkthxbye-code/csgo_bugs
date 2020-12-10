@@ -1,4 +1,19 @@
 'use strict';
+const CSGO_EXE_DIR = 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive';
+const VIDEO_FILE = 'C:\\Program Files (x86)\\Steam\\userdata\\885285072\\730\\local\\cfg\\video.txt';
+const NETCON_PORT = 2121;
+
+const PAK_FILES = [
+	'pak01_000.vpk',
+	'pak01_001.vpk',
+	'pak01_004.vpk',
+	'pak01_007.vpk',
+	'pak01_008.vpk',
+	'pak01_009.vpk',
+	'pak01_010.vpk',
+	'pak01_011.vpk'
+];
+
 const {basename} = require('path');
 const readline = require('readline');
 const {promisify} = require('util');
@@ -12,20 +27,6 @@ const isWindows = process.platform === 'win32';
 fs.write = promisify(require('fs').write);
 
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-if (isWindows) {
-	const input = readline.createInterface({
-		input: process.stdin
-	});
-
-	input.on('SIGINT', () => {
-		if (!process.emit('SIGINT')) {
-			process.exit();
-		}
-	});
-
-	process.stdin.unref();
-}
 
 const existsAsync = async path => {
 	try {
@@ -41,14 +42,10 @@ const existsAsync = async path => {
 	}
 };
 
-const CSGO_EXE_DIR = '/home/szm/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive';
-const VIDEO_FILE = '/home/szm/.local/share/Steam/userdata/1105952182/730/local/cfg/video.txt';
-const NETCON_PORT = 2121;
-
-let wallhackProps = [];
+let wallhackProps = {};
 let isPakOverwritten = false;
 
-let PAK_FILE = isWindows ? `${CSGO_EXE_DIR}\\csgo\\pak01_008.vpk` : `${CSGO_EXE_DIR}/csgo/pak01_008.vpk`;
+let PAK_PATH = isWindows ? `${CSGO_EXE_DIR}\\csgo\\` : `${CSGO_EXE_DIR}/csgo/`;
 const MIRROR_EXE = `${__dirname}\\mirror.exe`;
 const SHADER_REGEXP = /("setting.gpu_level"\s+")(\d)(")/;
 
@@ -63,9 +60,16 @@ const connect = port => new Promise((resolve, reject) => {
 			return;
 		}
 
-		setTimeout(() => {
+		const cancel = () => {
+			clearTimeout(timeout);
+		};
+
+		const timeout = setTimeout(() => {
+			process.off('SIGINT', cancel);
 			resolve(connect(port));
 		}, 1000);
+
+		process.on('SIGINT', cancel);
 	});
 });
 
@@ -91,27 +95,51 @@ const toggleUpdate = async socket => {
 	}
 };
 
-const write = async entries => {
-	const fd = await fs.open(PAK_FILE, O_RDWR);
+const write = async properties => {
+	for (const name in properties) {
+		while (true) {
+			try {
+				const entries = properties[name];
+				const path = PAK_PATH + name;
 
-	for (const entry of entries) {
-		await fs.write(fd.fd, entry.insert, entry.index);
+				const fd = await fs.open(path, O_RDWR);
+
+				for (const entry of entries) {
+					await fs.write(fd.fd, entry.insert, entry.index);
+				}
+
+				await fd.close();
+			} catch (error) {
+				if (error.code === 'EBUSY') {
+					console.log(`Error: EBUSY. Retrying in 1s...`);
+					await wait(1000);
+					continue;
+				}
+
+				throw error;
+			} finally {
+				break;
+			}
+		}
 	}
-
-	await fd.close();
 };
 
-const revert = async (entries, socket) => {
+const revert = async (properties, socket) => {
 	if (isPakOverwritten) {
-		const fd = await fs.open(PAK_FILE, O_RDWR);
+		for (const name in properties) {
+			const entries = properties[name];
+			const path = PAK_PATH + name;
 
-		for (const entry of entries) {
-			await fs.write(fd.fd, entry.original, entry.index);
+			const fd = await fs.open(path, O_RDWR);
+
+			for (const entry of entries) {
+				await fs.write(fd.fd, entry.original, entry.index);
+			}
+
+			await fd.close();
+
+			console.log(`Restored ${name} successfully.`);
 		}
-
-		await fd.close();
-
-		console.log(`Restored ${basename(PAK_FILE)} successfully.`);
 	}
 
 	if (!isWindows) {
@@ -129,7 +157,7 @@ const revert = async (entries, socket) => {
 			console.error(`Failed. Error code: ${error.code} - try closing CS:GO first.`);
 		}
 
-		PAK_FILE = `${CSGO_EXE_DIR}\\csgo\\pak01_008.vpk`;
+		PAK_PATH = `${CSGO_EXE_DIR}\\csgo\\`;
 
 		console.log('Done.');
 	}
@@ -143,7 +171,7 @@ const onPureServer = async socket => {
 	isPakOverwritten = true;
 
 	await wait(2000);
-	console.log('Got pure server! Overwriting the PAK file...');
+	console.log('Got pure server! Overwriting the PAK files...');
 
 	await write(wallhackProps);
 	console.log('Write successful.');
@@ -227,49 +255,56 @@ const findWallhackProps = buffer => {
 	const search = keys.map(key => `${key}"`);
 
 	const searchLetters = {};
+	const end = Symbol('end');
 
 	for (const key of search) {
 		let current = searchLetters;
 
-		for (const letter of key) {
-			const charCode = letter.charCodeAt(0);
-
-			if (!current[charCode]) {
-				current[charCode] = {};
+		for (const byte of Buffer.from(key)) {
+			if (!current[byte]) {
+				current[byte] = {};
 			}
 
-			current = current[charCode];
+			current = current[byte];
 		}
+
+		current[end] = key.length;
 	}
 
+	const expected = [];
+
 	const getNext = (buffer, start) => {
-		let index;
-		let current;
+		expected.length = 0;
 
 		const bufferLength = buffer.length;
+		for (let index = start; index < bufferLength; index++) {
+			const byte = buffer[index];
 
-		while (start < bufferLength) {
-			index = start;
-			current = searchLetters;
+			let {length} = expected;
+			for (let x = 0; x < length; x++) {
+				const e = expected[0];
 
-			while (buffer[index] in current) {
-				current = current[buffer[index++]];
-
-				if (Object.keys(current).length === 0) {
-					return {
-						startIndex: start,
-						endIndex: index
-					};
+				if (byte in e) {
+					if (end in e[byte]) {
+						return {
+							startIndex: index + 1 - e[byte][end],
+							endIndex: index + 1
+						};
+					} else {
+						expected.splice(0, 1);
+						expected.push(e[byte]);
+					}
+				} else {
+					expected.splice(0, 1);
 				}
 			}
 
-			start++;
+			if (byte in searchLetters) {
+				expected.push(searchLetters[byte]);
+			}
 		}
 
-		return {
-			startIndex: -1,
-			endIndex: -1
-		};
+		return {startIndex: -1, endIndex: -1};
 	};
 
 	const entries = [];
@@ -332,36 +367,29 @@ const findWallhackProps = buffer => {
 		console.log('');
 	}
 
-	const BACKUP_FILE = `${PAK_FILE}.backup`;
-
 	try {
-		console.log(`Reading ${basename(PAK_FILE)}`);
-		const buffer = await fs.readFile(PAK_FILE);
-
 		const now = Date.now();
 
-		console.log('Looking for possible wallhack props...');
-		wallhackProps = findWallhackProps(buffer);
+		for (const name of PAK_FILES) {
+			const buffer = await fs.readFile(PAK_PATH + name);
+			wallhackProps[name] = findWallhackProps(buffer);
 
-		console.log(`Searching took ${Date.now() - now} ms`);
+			console.log(`Found ${wallhackProps[name].length} properties in ${name}`);
 
-		if (wallhackProps.length === 0) {
-			console.log('No entries were found. Exiting.');
-			return;
+			if (wallhackProps[name].length) {
+				const BACKUP_FILE = `${PAK_PATH + name}.backup`;
+
+				const backupExists = await existsAsync(BACKUP_FILE);
+				if (backupExists) {
+					console.log('Backup already exists. Skipping.');
+				} else {
+					console.log('Creating backup...');
+					await fs.writeFile(BACKUP_FILE, buffer);
+					console.log(`Backup saved as ${basename(BACKUP_FILE)}`);
+				}
+			}
 		}
 
-		console.log(`Found ${wallhackProps.length} entries.`);
-
-		const backupExists = await existsAsync(BACKUP_FILE);
-		if (backupExists) {
-			console.log('Backup already exists. Skipping.');
-		} else {
-			console.log('Creating backup...');
-			await fs.writeFile(BACKUP_FILE, buffer);
-			console.log(`Backup saved as ${basename(BACKUP_FILE)}`);
-		}
-
-		PAK_FILE = isWindows ? `${CSGO_EXE_DIR}\\csgo_bak\\pak01_008.vpk` : PAK_FILE;
 		let socket;
 		let mirror;
 
@@ -419,6 +447,8 @@ const findWallhackProps = buffer => {
 					console.error(`${basename(MIRROR_EXE)} exited with error code ${code}`);
 				}
 			});
+
+			PAK_PATH = `${CSGO_EXE_DIR}\\csgo_bak\\`;
 		}
 
 		console.log('You can now launch CS:GO.');

@@ -40,8 +40,27 @@ then recompile with Visual Studio.
 7. Profit!
 8. To revert changes either close CS:GO or press CTRL+C in the terminal (this will close CS:GO on Windows).
 
-Please note that it does **not** work on Competitive and Wingman. It rarely works on Deathmatch and Casual. Always works on Danger Zone.
+### Maps
+
+* Danger Zone (all)
+
+* Nuke: CTs & Ts
+
+* Mirage: CTs
+* Vertigo: CTs
+* Inferno: CTs
+* Office: CTs
+* Agency: CTs
+
+* Overpass: Ts
+* Cache: Ts
+
+* Dust: none
+* Train: none
+* Anubis: none
+* Ancient: none
 
 ### Credits
 
 * [@szmarczak](https://github.com/szmarczak) for discovering the bug.
+* [@Billar42](https://github.com/Billar42) for noticing that replacing other VPK files will enable wallhacks on more maps.
