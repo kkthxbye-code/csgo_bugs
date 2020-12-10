@@ -11,7 +11,7 @@ While they mostly fixed it, they have left something behind... Danger Zone.
 0. Install [`Node.js`](https://nodejs.org/en/download/current/).
 1. If you're not running Windows, skip this step.
     1. Install [WinFSP](https://github.com/billziss-gh/winfsp/releases/tag/v1.9B1) (necessary for mirroring the VPK files)
-    2. Download pre-compiled [`passthrough-x64.exe`](passthrough-64.exe) or compile it [yourself](https://github.com/billziss-gh/winfsp/tree/v1.9B1/tst/passthrough-cpp).
+    2. Download pre-compiled [`passthrough-x64.exe`](passthrough-x64.exe) or compile it [yourself](https://github.com/billziss-gh/winfsp/tree/v1.9B1/tst/passthrough-cpp).
 2. Add `-netconport 2121` to launch options.
 3. Update `CSGO_EXE_DIR` and `VIDEO_FILE` constants in the `wallhack.js` file.
    Note that on Windows you need to use `\\` to add a backslash.
