@@ -21,6 +21,8 @@ While they mostly fixed it, they have left something behind... Danger Zone.
 7. Profit!
 8. To revert changes either close CS:GO or press CTRL+C in the terminal (this will close CS:GO on Windows).
 
+**Note:** Previous bypasses used [Dokany](https://github.com/dokan-dev/dokany). It got dropped because WinFSP is more stable.
+
 ### Maps
 
 * Danger Zone (all)
