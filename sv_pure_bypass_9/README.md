@@ -1,6 +1,6 @@
 ## sv\_pure bypass \#9
 
-A slightly different exploit - works only on non-official servers. That means it works on any community server, ESEA, Faceit, Esportal etc.
+A slightly different exploit - works only on non-official servers. That means it works on any community server, ESEA, ~~Faceit~~ (fixed), Esportal etc.
 
 ### Steps
 
