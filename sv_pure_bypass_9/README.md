@@ -20,6 +20,8 @@ When connecting to an offline server, CS:GO loads the VMTs inside the `materials
 
 ![image](https://user-images.githubusercontent.com/36894700/101847854-791a7200-3b54-11eb-88a1-38c43de5f61a.png)
 
+![image](https://user-images.githubusercontent.com/36894700/101848012-c72f7580-3b54-11eb-8ac6-c51cf3e535ae.png)
+
 ### Credits
 
 * [@szmarczak](https://github.com/szmarczak) for discovering the bug.
