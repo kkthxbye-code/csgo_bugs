@@ -14,7 +14,7 @@ On Mirage you can see both Ts and CTs through walls. Additionally, enjoy looking
 
 ### How it works?
 
-When connecting to an offline server, CS:GO loads the VMTs inside the `materials` directory. When you try to play official matchmaking, you will get `third party files have been loaded` error. But it doesn't happen when you connect to a non-official server!
+When connecting to an offline server, CS:GO loads *some* VMTs inside the `materials` directory. When you try to play official matchmaking, you will get `third party files have been loaded` error. But it doesn't happen when you connect to a non-official server!
 
 ### Screenshots
 
