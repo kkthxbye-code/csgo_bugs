@@ -10,6 +10,8 @@ A slightly different exploit - works only on non-official servers. That means it
 4. Connect to any non-official server. It can run `sv_pure 1` - it does **not** have any effect!
 5. Profit!
 
+On Mirage you can see both Ts and CTs through walls. Additionally, enjoy looking through bench on B.
+
 ### How it works?
 
 When connecting to an offline server, CS:GO loads the VMTs inside the `materials` directory. When you try to play official matchmaking, you will get `third party files have been loaded` error. But it doesn't happen when you connect to a non-official server!
