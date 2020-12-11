@@ -10,6 +10,14 @@ A slightly different exploit - works only on non-official servers. That means it
 4. Connect to any non-official server. It can run `sv_pure 1` - it does **not** have any effect!
 5. Profit!
 
+### How it works?
+
+When connecting to an offline server, CS:GO loads the VMTs inside the `materials` directory. When you try to play official matchmaking, you will get `third party files have been loaded` error. But it doesn't happen when you connect to a non-official server!
+
+### Screenshots
+
+![image](https://user-images.githubusercontent.com/36894700/101847854-791a7200-3b54-11eb-88a1-38c43de5f61a.png)
+
 ### Credits
 
 * [@szmarczak](https://github.com/szmarczak) for discovering the bug.
