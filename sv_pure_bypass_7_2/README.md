@@ -93,6 +93,39 @@ It's pretty simple. You just need [Node.js](https://nodejs.org/en/download/curre
 1. Copy the `generateWallhack.js` file to `~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo`.
 2. Run `node generateWallhack.js`.
 
+### SkinChanger
+Buy the following skins on the marketplace:
+* [AWP | Capillary](https://steamcommunity.com/market/listings/730/AWP%20%7C%20Capillary%20%28Battle-Scarred%29)
+* [AK-47 | Uncharted](https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Uncharted%20%28Battle-Scarred%29)
+* [Glock-18 | Oxide Blaze](https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Oxide%20Blaze%20%28Battle-Scarred%29)
+* [USP-S | Flashback](https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Flashback%20%28Field-Tested%29)
+* [Desert Eagle | Blue Ply](https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Blue%20Ply%20%28Battle-Scarred%29)
+
+### How to install
+
+1. Dowload [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) | [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
+2. Download this [`Skinchanger.zip`](https://drive.google.com/file/d/18keujp9OXI9L5mdv13dssTAhh4t_maJm/view?usp=sharing).
+3. Rename the `csgo` directory to `csgo_bak`.
+4. Unpack the archive using the following path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive.
+5. Go to the control folder at this path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/control/.
+6. Change the path to the `csgo` and `csgo_bak` folders in `mirror.cmd`
+```
+mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bak" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo
+```
+7. Change the path to csgo_bak in onmodels.cmd and offmodels.cmd
+
+### Launch
+1. Open the control folder and run `mirror.cmd` as an administrator
+2. Launch Cs:Go
+3. Join any server.
+4. Run `onskinchanger.cmd`.
+5. Switch shader settings to high / low.
+6. Open the console and write the command `mat_updateconvars`
+7. For the next round, re-purchase this weapon
+8. Profit! VAC-proof SkinChanger.
+
+
 ### Credits
 
 * [@szmarczak](https://github.com/szmarczak) for discovering the bug.
+* [@Billar42](https://github.com/billar42) made a skinchanger.
