@@ -83,9 +83,6 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 * Dust: Ts
 * Train: none
-* Anubis: none
-
-* Swamp: always crashes even with the original VPKs
 
 #### Generating the `pak01_007.vpk.wh` with wallhacks
 
