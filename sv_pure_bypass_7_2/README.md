@@ -68,6 +68,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 ### Maps
 
+* Danger Zone (all)
 * Nuke: CTs & Ts
 
 * Mirage: CTs & Ts
