@@ -130,6 +130,18 @@ After a successful replacement, you should have the following skins :
 * [USP-S | Kill Confirmed](https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Kill%20Confirmed%20%28Field-Tested%29)
 * [Desert Eagle | Code Red](https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Code%20Red%20%28Minimal%20Wear%29)
 
+### Anti-Door-Dust2
+1. Dowload [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) | [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
+2. Download this [`Anti-Door`](https://drive.google.com/file/d/1vO3rZAP1hslsepr9U1s0ZHfbOPiwZCUs/view?usp=sharing).
+3. Unpack the archive using the following path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive.
+4. Rename the `csgo` directory to `csgo_bak`
+5. Go to the control folder at this path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/control/.
+6. Change the path to the `csgo` and `csgo_bak` folders in `mirror.cmd`
+```
+mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bak" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"
+```
+7. Change the path to  `csgo_bak` in `anti-door_dust2.cmd` and `anti-door_dust2_off.cmd`
+
 ### Credits
 
 * [@szmarczak](https://github.com/szmarczak) for discovering the bug.
