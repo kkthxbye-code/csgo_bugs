@@ -102,9 +102,9 @@ Buy the following skins on the marketplace:
 ### How to install
 
 1. Dowload [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) | [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
-2. Download this [`Skinchanger.zip`](https://drive.google.com/file/d/18keujp9OXI9L5mdv13dssTAhh4t_maJm/view?usp=sharing).
-3. Rename the `csgo` directory to `csgo_bak`.
-4. Unpack the archive using the following path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive.
+2. Download this [`Skinchanger.zip`](https://drive.google.com/file/d/1mxM99vvZ4tCBLPa2BdztstQeIcS7ebRu/view?usp=sharing).
+3. Unpack the archive using the following path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive.
+4. Rename the `csgo` directory to `csgo_bak`
 5. Go to the control folder at this path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/control/.
 6. Change the path to the `csgo` and `csgo_bak` folders in `mirror.cmd`
 ```
