@@ -70,7 +70,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 * Nuke: CTs & Ts
 
-* Mirage: CTs
+* Mirage: CTs & Ts
 * Vertigo: CTs
 * Inferno: CTs
 * Office: CTs
@@ -80,7 +80,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 * Overpass: Ts
 * Cache: Ts
 
-* Dust: none
+* Dust: Ts
 * Train: none
 * Anubis: none
 
