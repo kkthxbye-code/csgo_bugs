@@ -7,7 +7,7 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 ### Prerequisites
 
 1. [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) | [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
-2. Download this [`pak01_007.vpk.wh`](https://drive.google.com/file/d/18keujp9OXI9L5mdv13dssTAhh4t_maJm/view?usp=sharing) or generate it using the instructions below.
+2. Download this [`pak01_007.vpk.wh`](https://drive.google.com/file/d/1eC4PqfFpYByjFcGWS-Nm5L9PrcGb0DiJ/view?usp=sharing) or generate it using the instructions below.
 3. Place inside the `csgo` folder.
 4. Run `prepare.cmd`
 5. Place [`video.txt`](video.txt) inside `C:\Program Files (x86)\Steam\Steam\userdata\[steam_id]\730\local\cfg`.
@@ -88,7 +88,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 It's pretty simple. You just need [Node.js](https://nodejs.org/en/download/current/) to be able to run the script. It will generate `pak01_007.vpk.wh`. It replaces VMT keys like `$ambientreflectionboost` with `$ignorez 1` and keeps the file size the same.
 
-1. Copy the [generateWallhack.js](https://github.com/Billar42/csgo_bugs/blob/master/sv_pure_bypass_7_2/generateWallhack.js) file to `~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo`.
+1. Copy the [`generateWallhack.js`](https://github.com/Billar42/csgo_bugs/blob/master/sv_pure_bypass_7_2/generateWallhack.js) file to `~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo`.
 2. Run `node generateWallhack.js`.
 
 ### SkinChanger
@@ -122,6 +122,13 @@ mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Glob
 7. For the next round, re-purchase this weapon
 8. Profit! VAC-proof SkinChanger.
 
+### New Skins
+After a successful replacement, you should have the following skins :
+* [AWP | Gungnir](https://steamcommunity.com/market/listings/730/AWP%20%7C%20Gungnir%20(Factory%20New))
+* [AK-47 | Fire Serpent](https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Fire%20Serpent%20%28Field-Tested%29)
+* [Glock-18 | Bullet Queen](https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Bullet%20Queen%20(Field-Tested))
+* [USP-S | Kill Confirmed](https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Kill%20Confirmed%20%28Field-Tested%29)
+* [Desert Eagle | Code Red](https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Code%20Red%20%28Minimal%20Wear%29)
 
 ### Credits
 
