@@ -112,7 +112,7 @@ Buy the following skins on the marketplace:
 ```
 mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bak" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo
 ```
-7. Change the path to csgo_bak in onskinchanger.cmd and offskinchanger.cmd
+7. Change the path to  `csgo_bak` in `onskinchanger.cmd` and `offskinchanger.cmd`
 
 ### Launch
 1. Open the control folder and run `mirror.cmd` as an administrator
