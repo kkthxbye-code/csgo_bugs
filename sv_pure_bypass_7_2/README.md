@@ -7,8 +7,8 @@ It seems that this is **still!** implemented poorly and for some `pak01_###.vpk`
 ### Prerequisites
 
 1. [Dokany](https://github.com/dokan-dev/dokany) (necessary for mirroring the VPK files) | [Download from GitHub](https://github.com/dokan-dev/dokany/releases/download/v1.4.0.1000/Dokan_x64.msi)
-2. Download this [`pak01_008.vpk`](https://drive.google.com/file/d/18keujp9OXI9L5mdv13dssTAhh4t_maJm/view?usp=sharing) or generate it using the instructions below.
-3. Rename it to `pak01_008.vpk.wh` and place inside the `csgo` folder.
+2. Download this [`wallhack.zip`](https://drive.google.com/file/d/18keujp9OXI9L5mdv13dssTAhh4t_maJm/view?usp=sharing) or generate it using the instructions below.
+3. Place inside the `csgo` folder.
 4. Run `prepare.cmd`
 5. Place [`video.txt`](video.txt) inside `C:\Program Files (x86)\Steam\Steam\userdata\[steam_id]\730\local\cfg`.
 
@@ -86,7 +86,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 * Swamp: always crashes even with the original VPKs
 
-#### Generating the `pak01_008.vpk` with wallhacks
+#### Generating the `pak01_007.vpk`, `pak01_010.vpk`, `pak01_011.vpk` with wallhacks
 
 It's pretty simple. You just need [Node.js](https://nodejs.org/en/download/current/) to be able to run the script. It will generate `pak01_008.vpk.wh`. It replaces VMT keys like `$ambientreflectionboost` with `$ignorez 1` and keeps the file size the same.
 
