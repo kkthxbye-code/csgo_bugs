@@ -88,7 +88,7 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 It's pretty simple. You just need [Node.js](https://nodejs.org/en/download/current/) to be able to run the script. It will generate `pak01_007.vpk.wh`. It replaces VMT keys like `$ambientreflectionboost` with `$ignorez 1` and keeps the file size the same.
 
-1. Copy the `generateWallhack.js` file to `~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo`.
+1. Copy the [generateWallhack.js](https://github.com/Billar42/csgo_bugs/blob/master/sv_pure_bypass_7_2/generateWallhack.js) file to `~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo`.
 2. Run `node generateWallhack.js`.
 
 ### SkinChanger
