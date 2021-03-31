@@ -86,9 +86,9 @@ Don't worry, this does NOT copy the files. This just mirrors the `csgo_bak` dire
 
 * Swamp: always crashes even with the original VPKs
 
-#### Generating the `pak01_007.vpk`, `pak01_010.vpk`, `pak01_011.vpk` with wallhacks
+#### Generating the `pak01_007.vpk.wh`, `pak01_010.vpk.wh`, `pak01_011.vpk.wh` with wallhacks
 
-It's pretty simple. You just need [Node.js](https://nodejs.org/en/download/current/) to be able to run the script. It will generate `pak01_007.vpk`, `pak01_010.vpk`, `pak01_011.vpk`. It replaces VMT keys like `$ambientreflectionboost` with `$ignorez 1` and keeps the file size the same.
+It's pretty simple. You just need [Node.js](https://nodejs.org/en/download/current/) to be able to run the script. It will generate `pak01_007.vpk.wh`, `pak01_010.vpk.wh`, `pak01_011.vpk.wh`. It replaces VMT keys like `$ambientreflectionboost` with `$ignorez 1` and keeps the file size the same.
 
 1. Copy the `generateWallhack.js` file to `~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo`.
 2. Run `node generateWallhack.js`.
