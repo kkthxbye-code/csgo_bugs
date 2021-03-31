@@ -110,7 +110,7 @@ Buy the following skins on the marketplace:
 5. Go to the control folder at this path ~/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/control/.
 6. Change the path to the `csgo` and `csgo_bak` folders in `mirror.cmd`
 ```
-mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bak" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo
+mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bak" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"
 ```
 7. Change the path to  `csgo_bak` in `onskinchanger.cmd` and `offskinchanger.cmd`
 
