@@ -17,49 +17,49 @@ const keys = [
 	'phongalbedoboost',
 	'ambientreflectionboost',
 	'teammatevar',
-	// 'anisotropyamount',
-	// 'envmaptint',
-	// 'envmaplightscaleminmax',
-	// 'envmapsaturation',
-	// 'envmap',
-	// 'basealphaenvmask',
-	// 'phongboost',
-	// 'rimlightexponent',
-	// 'rimlightboost',
-	// 'ambientreflectionbouncecenter',
-	// 'ambientreflectionbouncecolor',
-	// 'shadowsaturationbounds',
-	// 'shadowtint',
-	// 'shadowcontrast',
-	// 'shadowsaturationbounds',
-	// 'shadowsaturation',
-	// 'shadowtint',
-	// 'fakerimboost',
-	// 'fakerimtint',
-	// 'phongexponent',
-	// 'rimlighttint',
-	// 'warpindex',
-	// 'fakerimlightscaleminmax',
-	// 'econ_patches_enabled',
-	// 'nodecal',
-	// 'rimmask',
-	// 'rimlight',
-	// 'translucent',
-	// 'fresnelranges',
-	// 'alphatest',
-	// 'phongfresnelranges',
-	// 'phongdisablehalflambert',
-	// 'phongexponenttexture',
-	// 'bumpmap',
-	// 'selfillum',
-	// 'selfillumfresnel',
-	// 'selfillumfresnelminmaxexp',
-	// 'selfillummask',
-	// 'envmapfresnel',
-	// 'phongdisablehalflambert',
-	// 'basemapalphaphongmask',
-	// 'normalmapalphaenvmapmask',
-	// 'phongalbedotint'
+	//'anisotropyamount',
+	//'envmaptint',
+	//'envmaplightscaleminmax',
+	//'envmapsaturation',
+	//'envmap',
+	//'basealphaenvmask',
+	//'phongboost',
+	//'rimlightexponent',
+	//'rimlightboost',
+	//'ambientreflectionbouncecenter',
+	//'ambientreflectionbouncecolor',
+	//'shadowsaturationbounds',
+	//'shadowtint',
+	//'shadowcontrast',
+	//'shadowsaturationbounds',
+	//'shadowsaturation',
+	//'shadowtint',
+	//'fakerimboost',
+	//'fakerimtint',
+	//'phongexponent',
+	//'rimlighttint',
+	//'warpindex',
+        //'fakerimlightscaleminmax',
+	//'econ_patches_enabled',
+	//'nodecal',
+	//'rimmask',
+	//'rimlight',
+	//'translucent',
+	//'fresnelranges',
+	//'alphatest',
+	//'phongfresnelranges',
+	//'phongdisablehalflambert',
+	//'phongexponenttexture',
+	//'bumpmap',
+	//'selfillum',
+	//'selfillumfresnel',
+	//'selfillumfresnelminmaxexp',
+	//'selfillummask',
+	//'envmapfresnel',
+	//'phongdisablehalflambert',
+	//'basemapalphaphongmask',
+	//'normalmapalphaenvmapmask',
+	//'phongalbedotint'
 ];
 
 const allowedCharacters = '0123456789.'.split('').map(x => x.charCodeAt(0));
@@ -143,13 +143,4 @@ const next = (vpk = 0) => {
 	}
 };
 
-// next(0);
-// next(2);
-next(8);
-// next(56);
-
-// next(1);
-// next(6);
-// next(7);
-// next(11);
-// next(111);
+next(7);

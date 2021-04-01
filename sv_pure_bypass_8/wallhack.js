@@ -4,14 +4,7 @@ const VIDEO_FILE = 'C:\\Program Files (x86)\\Steam\\userdata\\885285072\\730\\lo
 const NETCON_PORT = 2121;
 
 const PAK_FILES = [
-	'pak01_000.vpk',
-	'pak01_001.vpk',
-	'pak01_004.vpk',
 	'pak01_007.vpk',
-	'pak01_008.vpk',
-	'pak01_009.vpk',
-	'pak01_010.vpk',
-	'pak01_011.vpk'
 ];
 
 const {basename} = require('path');
