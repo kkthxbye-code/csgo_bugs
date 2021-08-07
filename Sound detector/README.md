@@ -5,12 +5,17 @@
 Я наткнулся на видео [Deposita](youtube.com/watch?v=k8D8jAklUus&t=310s) где он с помощью субтитров отслеживал все звуки которые воспроизводились на карте. Относительно недавно ее пофиксили и я решил сделать похожую версию этого детектора. В игре есть примерно 4 звука которые воспроизводят попадание в тело и 2 звука при попадании в голову:
 
 [flesh_impact_bullet1.wav](https://drive.google.com/file/d/12Y5X0ZR6GF5uz4d--aYQguCAH-NrS0ZJ/view?usp=sharing)
+
 [flesh_impact_bullet2.wav](https://drive.google.com/file/d/1bc7g1q9YfYtxK4lW1zb4gH_CHJy3cXnv/view?usp=sharing)
+
 [flesh_impact_bullet3.wav](https://drive.google.com/file/d/1MJty-W2LITEGFayW_BVWjUbSybPDQfaB/view?usp=sharing)
+
 [flesh_impact_bullet4.wav](https://drive.google.com/file/d/1HOdiBMSz--VDlGj6vvtsa_xoBjgMZNfN/view?usp=sharing)
+
 [headshot1.wav](https://drive.google.com/file/d/1L7-eAzeeF_OVk1TKi0xlq2UQVfkCFMkw/view?usp=sharing)
+
 [headshot2.wav](https://drive.google.com/file/d/1V3-yVTHoDKA1Piq4Zzt1bCyecygZzLla/view?usp=sharing)
-```
+
 И чтобы узнать появлялся этот звук или нет я просто удалил их из файлов игры, чтобы консоль писала мне об ошибке, что такого файла нет:
  ```
   "[Sound] S_StartSound(): Failed to load sound '~physics\\flesh\\flesh_impact_bullet1.wav'. File is missing from disk or is invalid.",
