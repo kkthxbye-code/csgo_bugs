@@ -43,14 +43,14 @@ headshot2.wav
 ### Инструкция по установке
 
 1) Устанавливаем по ссылочке dokan library [dokan](github.com/dokan-dev/dokany/releases/tag/v1.5.0.3000)
-2) Устанавливаем по ссылочке [node js](nodejs.org/en)
+2) Устанавливаем по ссылочке [node js](nodejs.org/en)(по выбору)
 3) Устанавливаем по ссылочке мой архив 
 4) Распоковываем мой архив ~steamapps\common\Counter-Strike Global Offensive по этому пути
 5) Переименуйте папку csgo в csgo_bugs
 6) Создайте новую папку csgo (обязательно пустую)
 7) Откройте папку detector и измените файл mirror.cmd
 8) По примеру 
- ``` 
+``` 
 c:
 cd C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\detector
 mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bugs" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"
@@ -59,7 +59,8 @@ mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Glob
    2 строка переходит папку detector
    Запуск программы mirror.exe и создание зеркальной папки csgo_bugs в пустую папку csgo
 10) Если все правильно записано и все папки соответствуют путям на диске, то запустите mirror.cmd от имени администратора, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```. 
-11) Запускаем, который расположен по этому пути ~Steam\steamapps\common\Counter-Strike Global Offensive\detector hitdetector.js 
+11) Запускаем, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector``` hitdetector.js 
+11.2) Если не установили node js, то просто запускаем ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector``` hitdetector.exe
 12) Запускаем steam
 13) Заходим в свойства csgo и в параметры запуска пишем -netconport 2121
 14) Запускаем csgo
