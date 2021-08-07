@@ -2,7 +2,7 @@
 
 ### История создания
 
-Я наткнулся на видео [Deposita](youtube.com/watch?v=k8D8jAklUus&t=310s) где он с помощью субтитров отслеживал все звуки которые воспроизводились на карте. Относительно недавно ее пофиксили и я решил сделать похожую версию этого детектора. В игре есть примерно 4 звука которые воспроизводят попадание в тело и 2 звука при попадании в голову:
+Я наткнулся на видео [Deposita](https://youtube.com/watch?v=k8D8jAklUus&t=310s) где он с помощью субтитров отслеживал все звуки которые воспроизводились на карте. Относительно недавно ее пофиксили и я решил сделать похожую версию этого детектора. В игре есть примерно 4 звука которые воспроизводят попадание в тело и 2 звука при попадании в голову:
 
 [flesh_impact_bullet1.wav](https://drive.google.com/file/d/12Y5X0ZR6GF5uz4d--aYQguCAH-NrS0ZJ/view?usp=sharing)
 
@@ -43,7 +43,7 @@
 
 ### Инструкция по установке
 
-1) Устанавливаем по ссылочке [dokan library](github.com/dokan-dev/dokany/releases/tag/v1.5.0.3000)
+1) Устанавливаем по ссылочке [dokan library](https://github.com/dokan-dev/dokany/releases/tag/v1.5.0.3000)
 2) Устанавливаем по ссылочке [node js](https://nodejs.org/en) (по выбору)
 3) Устанавливаем по ссылочке [мой архив](https://drive.google.com/file/d/1ELmuu1K0CAKvuN5gQQJZaFLKyq38Rg1W/view?usp=sharing)
 4) Распоковываем мой архив ```~steamapps\common\Counter-Strike Global Offensive по этому пути```
