@@ -21,7 +21,7 @@ https://user-images.githubusercontent.com/75508060/128590469-1247096f-090f-4305-
 
 [headshot2.wav](https://drive.google.com/file/d/1V3-yVTHoDKA1Piq4Zzt1bCyecygZzLla/view?usp=sharing)
 
-И чтобы узнать появлялся этот звук или нет я просто удалил их из файлов игры, чтобы консоль писала мне об ошибке, что такого файла нет:
+И чтобы узнать появлялся этот звук или нет я просто удалил их из файлов игры, чтобы консоль сообщала мне об ошибке, что такого файла нет:
  ```
   "[Sound] S_StartSound(): Failed to load sound '~physics\\flesh\\flesh_impact_bullet1.wav'. File is missing from disk or is invalid.",
   "[Sound] S_StartSound(): Failed to load sound '~physics\\flesh\\flesh_impact_bullet2.wav'. File is missing from disk or is invalid.",
