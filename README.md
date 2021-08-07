@@ -8,7 +8,7 @@ Why post stuff like this in public? Valve doesn't care anymore, see the [model_b
 
 | Exploit            | Fixed     | Found Date | Fixed Date  | Credits        |
 |--------------------|-----------|------------|-------------|----------------|
-| Sound detector     | No        | 04-12-2020 |                                                                        | [@Billar42](Billar42),[Deposit](),[Merely04](merely04),[DmaX]() |
+| Sound detector     | No        | 04-12-2020 |                                                                        | [@Billar42](Billar42),[Deposit](),[Merely04](merely04) and [DmaX]() |
 | model_bug          | Yes       | [??-10-2018](https://github.com/ValveSoftware/csgo-osx-linux/issues/1888) | [23-07-2020](https://blog.counter-strike.net/index.php/2020/07/30991/) | [@kkthxbye-code](https://github.com/kkthxbye-code) |
 | panora_mitm_xss    | Yes       | 04-05-2019 | [07-05-2019](https://blog.counter-strike.net/index.php/2019/05/24111/) | [@kkthxbye-code](https://github.com/kkthxbye-code) |
 | sv_pure_bypass     | Yes       | ??-05-2019 | [29-07-2020](https://blog.counter-strike.net/index.php/2020/07/31071/) | [@kkthxbye-code](https://github.com/kkthxbye-code) |
