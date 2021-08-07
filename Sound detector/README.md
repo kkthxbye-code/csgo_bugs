@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/75508060/128590469-1247096f-090f-4305-
   "S_StartSound: Invalid sample rate (12000) for sound '~physics\\flesh\\flesh_impact_bullet4.wav'.",
   "S_StartSound: Invalid sample rate (12000) for sound '~physics\\flesh\\flesh_impact_bullet5.wav'.",
   ```
-  Осталось просто эти звуки отследить с помощью чтение консоли с этим мне помогли 2 моих друга:[@Dmax](https://github.com/DMax-YT),[@merely04](https://github.com/merely04)
+  Осталось просто эти звуки отследить с помощью чтение консоли с этим мне помогли 2 моих друга:[@DMax](https://github.com/DMax-YT),[@merely04](https://github.com/merely04)
   
   Теперь все попадания выводит в чат и есть 2 минуса:
   * На сообщения в чат ```csgo``` есть кд
@@ -80,6 +80,6 @@ mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Glob
 
 [@Deposit](https://www.youtube.com/c/DepoSitorium/) За идею создания sound detector
 
-[@Dmax](https://github.com/DMax-YT) Написал node js скрипт которые отслеживает переменные в консоли
+[@DMax](https://github.com/DMax-YT) Написал node js скрипт которые отслеживает переменные в консоли
 
 [@Merely04](https://github.com/merely04) Написал c# код который отслеживает переменные в консоли
