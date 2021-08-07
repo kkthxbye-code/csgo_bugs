@@ -56,14 +56,14 @@ cd C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive
 mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo_bugs" /l "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"
 ```
 9) 1 строка показывает это диск
-10) 2 строка переходит папку detector
-11) Запуск программы mirror.exe и создание зеркальной папки csgo_bugs в пустую папку csgo
-12) Если все правильно записано и все папки соответствуют путям на диске, то запустите mirror.cmd от имени администратора, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```. 
-13) Запускаем, который расположен по этому пути ~Steam\steamapps\common\Counter-Strike Global Offensive\detector hitdetector.js 
-14) Запускаем steam
-15) Заходим в свойства csgo и в параметры запуска пишем -netconport 2121
-16) Запускаем csgo
-17) Запускаем карту
-18) Если зашли на карту запускаем onsound.cmd, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```
-19) Заходим в настройки csgo /звуки,музыка/ и меняем свое звуковое устройство на другое Пример: с динамиков на наушники
-20) Все теперь при попадании в enemy регистрирует попадание и выводит это в чат
+   2 строка переходит папку detector
+   Запуск программы mirror.exe и создание зеркальной папки csgo_bugs в пустую папку csgo
+10) Если все правильно записано и все папки соответствуют путям на диске, то запустите mirror.cmd от имени администратора, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```. 
+11) Запускаем, который расположен по этому пути ~Steam\steamapps\common\Counter-Strike Global Offensive\detector hitdetector.js 
+12) Запускаем steam
+13) Заходим в свойства csgo и в параметры запуска пишем -netconport 2121
+14) Запускаем csgo
+15) Запускаем карту
+16) Если зашли на карту запускаем onsound.cmd, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```
+17) Заходим в настройки csgo /звуки,музыка/ и меняем свое звуковое устройство на другое Пример: с динамиков на наушники
+18) Все теперь при попадании в enemy регистрирует попадание и выводит это в чат
