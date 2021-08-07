@@ -47,9 +47,9 @@
 2) Устанавливаем по ссылочке [node js](nodejs.org/en) (по выбору)
 3) Устанавливаем по ссылочке [мой архив](https://drive.google.com/file/d/1ELmuu1K0CAKvuN5gQQJZaFLKyq38Rg1W/view?usp=sharing)
 4) Распоковываем мой архив ```~steamapps\common\Counter-Strike Global Offensive по этому пути```
-5) Переименуйте папку csgo в csgo_bugs
-6) Создайте новую папку csgo (обязательно пустую)
-7) Откройте папку detector и измените файл mirror.cmd
+5) Переименуйте папку ```csgo``` в ```csgo_bugs```
+6) Создайте новую папку ```csgo``` (обязательно пустую)
+7) Откройте папку detector и измените файл ```mirror.cmd```
 8) По примеру 
 ``` 
 c:
@@ -58,16 +58,16 @@ mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Glob
 ```
 9) 1 строка показывает это диск
    2 строка переходит папку detector
-   Запуск программы mirror.exe и создание зеркальной папки csgo_bugs в пустую папку csgo
+   Запуск программы ```mirror.exe``` и создание зеркальной папки ```csgo_bugs``` в пустую папку ```csgo```
 10) Если все правильно записано и все папки соответствуют путям на диске, то запустите mirror.cmd от имени администратора, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```. 
-11) Запускаем, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector``` hitdetector.js 
-11.2) Если не установили node js, то просто запускаем ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector``` hitdetector.exe
-12) Запускаем steam
-13) Заходим в свойства csgo и в параметры запуска пишем -netconport 2121
-14) Запускаем csgo
+11) Запускаем, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector``` ```hitdetector.js ```
+11.2) Если не установили node js, то просто запускаем ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector``` ```hitdetector.exe```
+12) Запускаем ```steam```
+13) Заходим в свойства csgo и в параметры запуска пишем ```-netconport 2121```
+14) Запускаем ```csgo```
 15) Запускаем карту
-16) Если зашли на карту запускаем onsound.cmd, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```
-17) Заходим в настройки csgo /звуки,музыка/ и меняем свое звуковое устройство на другое Пример: с динамиков на наушники
+16) Если зашли на карту запускаем ```onsound.cmd```, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```
+17) Заходим в настройки ```csgo``` /звуки,музыка/ и меняем свое звуковое устройство на другое Пример: с динамиков на наушники
 18) Все теперь при попадании в enemy регистрирует попадание и выводит это в чат
 
 ###  Авторы
