@@ -44,7 +44,7 @@
 ### Инструкция по установке
 
 1) Устанавливаем по ссылочке [dokan library](github.com/dokan-dev/dokany/releases/tag/v1.5.0.3000)
-2) Устанавливаем по ссылочке [node js](nodejs.org/en) (по выбору)
+2) Устанавливаем по ссылочке [node js](https://nodejs.org/en) (по выбору)
 3) Устанавливаем по ссылочке [мой архив](https://drive.google.com/file/d/1ELmuu1K0CAKvuN5gQQJZaFLKyq38Rg1W/view?usp=sharing)
 4) Распоковываем мой архив ```~steamapps\common\Counter-Strike Global Offensive по этому пути```
 5) Переименуйте папку ```csgo``` в ```csgo_bugs```
