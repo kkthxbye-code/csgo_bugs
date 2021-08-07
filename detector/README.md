@@ -30,11 +30,7 @@ headshot2.wav
   "S_StartSound: Invalid sample rate (12000) for sound '~physics\\flesh\\flesh_impact_bullet4.wav'.",
   "S_StartSound: Invalid sample rate (12000) for sound '~physics\\flesh\\flesh_impact_bullet5.wav'.",
   ```
-  Осталось просто эти звуки отследить с помощью чтение консоли с этим мне помогли 2 моих друга:
-  
-  [@Dmax]()
-  
-  [@merely04](https://github.com/merely04)
+  Осталось просто эти звуки отследить с помощью чтение консоли с этим мне помогли 2 моих друга:[@Dmax](),[@merely04](https://github.com/merely04)
   
   Теперь все попадания выводит в чат и есть 2 минуса:
   * На сообщения в чат csgo есть кд
@@ -68,3 +64,12 @@ mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Glob
 16) Если зашли на карту запускаем onsound.cmd, который расположен по этому пути ```~Steam\steamapps\common\Counter-Strike Global Offensive\detector```
 17) Заходим в настройки csgo /звуки,музыка/ и меняем свое звуковое устройство на другое Пример: с динамиков на наушники
 18) Все теперь при попадании в enemy регистрирует попадание и выводит это в чат
+
+###  Авторы
+*[@Billar42](https://github.com/Billar42) За создания vpk, которые игнорируют звуки
+
+*[@Deposit](https://www.youtube.com/c/DepoSitorium/) За идею создания sound detector
+
+*[@Dmax]() Написал node js скрипт которые отслеживает переменные в консоли
+
+*[@Merely04](https://github.com/merely04) Написал c# код который отслеживает переменные в консоли
