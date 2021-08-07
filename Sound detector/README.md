@@ -66,10 +66,10 @@ mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Glob
 18) Все теперь при попадании в enemy регистрирует попадание и выводит это в чат
 
 ###  Авторы
-*[@Billar42](https://github.com/Billar42) За создания vpk, которые игнорируют звуки
+[@Billar42](https://github.com/Billar42) За создания vpk, которые игнорируют звуки
 
-*[@Deposit](https://www.youtube.com/c/DepoSitorium/) За идею создания sound detector
+[@Deposit](https://www.youtube.com/c/DepoSitorium/) За идею создания sound detector
 
-*[@Dmax]() Написал node js скрипт которые отслеживает переменные в консоли
+[@Dmax]() Написал node js скрипт которые отслеживает переменные в консоли
 
-*[@Merely04](https://github.com/merely04) Написал c# код который отслеживает переменные в консоли
+[@Merely04](https://github.com/merely04) Написал c# код который отслеживает переменные в консоли
