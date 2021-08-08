@@ -77,10 +77,13 @@ mirror.exe /r "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Glob
 
 ### Bomb sound detector
 [134pak](https://drive.google.com/file/d/1pOhDmtEEGM_wj0-75F6WGIVB2jRXQwmm/view?usp=sharing)
-Sound
+
+Sound:
 [c4_beep2](https://drive.google.com/file/d/1LBvSz47Y6EWiez50W-5UL90s64uLqKR_/view?usp=sharing)
+
 Console error:
 ```S_StartSound: Invalid sample rate (48000) for sound '~weapons\c4\c4_beep2.wav'.```
+
 Как отследить ?
 Так как бомба с каждой секундой ускоряет [c4_beep2](https://drive.google.com/file/d/1LBvSz47Y6EWiez50W-5UL90s64uLqKR_/view?usp=sharing) сложно написать скрипт который отследит это с точностью до секунды
 
