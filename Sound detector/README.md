@@ -94,7 +94,7 @@ Console error:
 P.S Не ну, а хули я тут хуетой страдал твой детектор восстановил
 
 ###  Авторы
-[@Billar42](https://github.com/Billar42) За создания vpk, которые игнорируют звуки
+[@Billar42](https://github.com/Billar42) Может менять vpk как хочет ^ ^
 
 [@Deposit](https://www.youtube.com/c/DepoSitorium/) За идею создания sound detector
 
