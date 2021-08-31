@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/75508060/128590469-1247096f-090f-4305-
 
 Discord Billar42#3113
 
-23.08 в 17:00 памагу всем людям кто нисмог установить в дискорд сервере https://discord.gg/6JUC8uPF
+23.08 в 17:00 памагу всем людям кто нисмог установить в дискорд сервере https://discord.gg/XgYhdMbBX5
 
 ### История создания
 
