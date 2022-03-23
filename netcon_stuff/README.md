@@ -9,3 +9,15 @@ The [hitmarker](https://github.com/kkthxbye-code/csgo_bugs/tree/master/netcon_st
 Also check out [csctl](https://github.com/403-Fruit/csctl) by [403-Fruit](https://github.com/403-Fruit).
 
 More stuff will probably be added when I get the time.
+
+## New: Bomb Timer
+
+### Steps
+1.Install [Node js](https://nodejs.org/).
+
+2.Download [bomb_timer](https://github.com/Billar42/csgo_bugs/tree/master/netcon_stuff/bomb_timer) script.
+
+3.Run CSGO with `-netconport 2121`.
+
+4.Run `bomb_timer.js`.
+##### Credits: [Billar42](https://github.com/Billar42), [DMax](https://github.com/DMax-YT).
