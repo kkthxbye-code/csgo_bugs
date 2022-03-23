@@ -21,3 +21,7 @@ More stuff will probably be added when I get the time.
 
 4.Run `bomb_timer.js`.
 ##### Credits: [Billar42](https://github.com/Billar42), [DMax](https://github.com/DMax-YT).
+
+
+https://user-images.githubusercontent.com/75508060/159785467-0ea90a18-835d-4673-b12d-6d8c8661905b.mp4
+
