@@ -5,7 +5,7 @@ const rl = require("readline");
 
 const commands = {
   listSounds: "soundlist;\nclear;\n",
-  clearSoundCache: "snd_surround_speakers 0;\nsnd_surround_speakers 1;\n;clear;\n",
+  clearSoundCache: "snd_surround_speakers 0;\nsnd_surround_speakers 1;\n;clear;\n;c",
 };
 
 /**
